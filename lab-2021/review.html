@@ -8,37 +8,40 @@
     
     html {
       font-size: 100%;
-      font-family: Roboto, sans-serif;
+      font-family: Roboto, sans serif;
       line-height: 1.6;
-      background-color: rgb(106, 104, 206, 0.3);
-      margin: 0 10em 5em 10em;
+      background-image: linear-gradient(#F6CEAC, #F7B7C1, #EAC5D7);
+      margin: 0 10em 0em 10em;
     }
 
     h3 {
-        font-family: Georgia, 'Times New Roman', Times, serif
+        font-family: Roboto, sans-serif
     }
 
-    .list{
-        padding: 0;
+    li{
+        padding: 10px;
         list-style: none;
         text-decoration: none;
-        color:rgb(152, 66, 209);
-        list-style-type: square;
+        color:rgb(0, 0, 0);
+        list-style-type:square;
     }
+    
+    li { background: #F7B7C1; }
+    li:nth-child(odd) { background: #F6CEAC; }
 
     a:link {
         text-decoration: none;
-        color: rgb(152, 66, 209);
+        color: rgb(0, 0, 0);
     }
 
     a:visited {
         text-decoration: none;
-        color: rgb(68, 102, 216);
+        color: rgb(100, 100, 100);
     }
 
     a:hover {
         text-decoration: underline;
-        color: rgb(200, 43, 231);
+        color: rgb(151, 151, 151);
         font-size: 200%;
     }
 
@@ -48,33 +51,46 @@
 
     blockquote {
         font-size: 150%;
-        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-family: Roboto, sans serif;
         font-weight: 800;
     }
 
-    .center {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
+    .container2 {
+        display: flex;
     }
-   
+
+    .container2 div {
+        padding: 30px;
+    }
+
     </style>
 </head>
 	
 	<body>
-		<h1>Core 1 Review Page</h1>
-		<h3>Studying/Productivity Apps</h3>
+
+        <div class="container1">
+		    <h1>Core 1 Review Page</h1>
+		    <h3>Studying/Productivity Apps</h3>
 				<ul class="list">
 					<li>Notion</li>
                     <li>Notability</li>
                     <li>Google Docs</li>
                 </ul>
-                
-            <img src="vsco.jpg" alt="Archiving my photos in VSCO" width="400" height="auto" class="center">
-                <blockquote>
+        </div>
+        
+        <div class="container2">
+            <div class="box-1">
+                <img src="vsco.jpg" alt="Archiving my photos in VSCO" width="200" height="auto">
+            </div>
+
+            <div class="box-2">
+               <blockquote>
 		        I use the app, VSCO, to archive my photos.
                 </blockquote>
-    
+            </div>
+        </div>
+
+        <div class="container3">
             <label for="digital">Digital Organizing Apps:</label>
 
             <select name="digital" id="digtial">
@@ -82,7 +98,7 @@
               <option value="digital">Google Calendar</option>
               <option value="digital">Notability</option>
               <option value="digital">Google Docs</option>
-              <option value="digital">sGoogle Sheets</option>
+              <option value="digital">Google Sheets</option>
             </select>
 
             <br>
@@ -91,8 +107,8 @@
             <label for="physical">Physical Organizing Apps:</label>
 
             <select name="physical" id="physical">
-              <option value="journal">Bullet Journal</option>
-              <option value="planner">MUJI Planner</option>
+              <option value="physical">Bullet Journal</option>
+              <option value="physical">MUJI Planner</option>
             </select>
 
             <ul class="list">
@@ -102,5 +118,8 @@
                 <li><a href="https://www.google.com/sheets/about/">Google Sheets</a></li>
                 <li><a href="https://www.google.com/docs/about/">Google Docs</a></li>
             </ul>
+
+            <br>
+        </div>
 	</body>
 </html>
