@@ -1,0 +1,38 @@
+html {
+    margin: 0 200px 0 200px;
+    font-size: 100%;
+    font-family: Roboto, sans-serif;
+    line-height: 1.6;
+    background-image: linear-gradient(#F6CEAC, #F7B7C1, #EAC5D7);
+}
+
+h1 {
+    font-size: 4em;
+    line-height: 100%;
+}
+
+h2 {
+    font-size: 2em;
+    line-height: 100%;
+}
+
+.responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+.img {
+    padding: 20px;
+}
+
+.center {
+    max-width: 50%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container3, .container4 {
+    display:flex;
+}
