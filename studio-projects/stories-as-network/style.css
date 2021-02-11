@@ -1,5 +1,5 @@
 html {
-    margin: 0 200px 0 200px;
+    margin: 0 15% 0 15%;
     font-size: 100%;
     font-family: Roboto, sans-serif;
     line-height: 1.6;
@@ -22,7 +22,7 @@ h2 {
 }
 
 .img {
-    padding: 20px;
+    padding: 1%;
 }
 
 .center {
@@ -33,6 +33,6 @@ h2 {
     margin-right: auto;
 }
 
-.container3, .container4 {
+.container3 {
     display:flex;
 }
