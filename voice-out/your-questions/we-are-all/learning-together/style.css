@@ -1,3 +1,94 @@
+@font-face {
+    font-family: 'sporting_grotesqueregular';
+    src: url("fonts/sportinggrotesque-regular-webfont.woff2") format('woff2'),
+         url("fonts/forum-regular-webfont.woff") format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'suisse_intlthin';
+    src: url("fonts/suisseintl-thin-webfont.woff2") format('woff2'),
+         url("fonts/suisseintl-thin-webfont.woff") format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'forumregular';
+    src: url("fonts/forum-regular-webfont.woff2") format('woff2'),
+         url("fonts/forum-regular-webfont.woff") format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 html {
     margin: 30px;
+    padding: 10px;
+}
+
+h1 {
+    font-family: 'sporting_grotesqueregular', Arial, sans-serif;
+    font-weight:normal;
+    font-style:normal;
+    font-size: 3rem;
+    line-height: 1.2em;
+    }
+
+h2 {
+    font-family: 'forumregular', Arial, sans-serif;
+    font-weight:normal;
+    font-style:normal;
+    }
+
+body {
+    font-family: 'suisse_intlthin';
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.background1 {
+    background-color: aqua;
+}
+
+.background2 {
+    background-color: aquamarine;
+}
+
+.background3 {
+    background-color:deepskyblue;
+}
+
+.bigger {
+    font-size: 150%;
+}
+
+.color1 {
+    color:salmon;
+}
+
+.color2 {
+    color: lightsalmon;
+}
+
+.color3 {
+    color:palevioletred;
+}
+
+.space1 {
+    letter-spacing: 10px;
+}
+
+.space2 {
+    letter-spacing: 30px;
+}
+
+.space3 {
+    letter-spacing: 50px;
+    font-size: 150%;
 }
