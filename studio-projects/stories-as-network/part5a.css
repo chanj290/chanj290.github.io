@@ -60,30 +60,33 @@ div {
 }
 
 .shake {
-    color:  #bf4226;
-    animation: 0.8s shake infinite alternate;
+	display:block;
+	position:relative;
+    display:inline-block;
+    color: #bf4226;
+    animation: infinite;
 }
 
-.custom-cur {
-    cursor: url('cursor.png');
-  }
-  
-  /* With a .cur fallback */
-  .custom-cur {
-    cursor: url('cursor.png'),
-    url('cursor.png');
-  }
-  
-  /* With a custom hotspot */
-  .custom-cur {
-    cursor: url('cursor.png') 10 12;
-  }
-  
-  /* With a non-custom fallback: */
-  .custom-cur {
-    cursor: url('cursor.png'),
-    move;
-  }
+@-webkit-keyframes spaceboots {
+	0% { -webkit-transform: translate(2px, 1px) rotate(0deg); }
+	10% { -webkit-transform: translate(-1px, -2px) rotate(-1deg); }
+	20% { -webkit-transform: translate(-3px, 0px) rotate(1deg); }
+	30% { -webkit-transform: translate(0px, 2px) rotate(0deg); }
+	40% { -webkit-transform: translate(1px, -1px) rotate(1deg); }
+	50% { -webkit-transform: translate(-1px, 2px) rotate(-1deg); }
+	60% { -webkit-transform: translate(-3px, 1px) rotate(0deg); }
+	70% { -webkit-transform: translate(2px, 1px) rotate(-1deg); }
+	80% { -webkit-transform: translate(-1px, -1px) rotate(1deg); }
+	90% { -webkit-transform: translate(2px, 2px) rotate(0deg); }
+	100% { -webkit-transform: translate(1px, -2px) rotate(-1deg); }
+}
+ .shake {
+	-webkit-animation-name: spaceboots;
+	-webkit-animation-duration: 0.8s;
+	-webkit-transform-origin:50% 50%;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+}
 
 .reveal { opacity: 20%; transition: opacity 0.5s linear; }
 
@@ -122,7 +125,7 @@ div {
     }
 
     p {
-        max-width: 70%;
+        max-width: 80%;
         margin: auto;
     }
 }
