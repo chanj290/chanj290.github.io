@@ -1,0 +1,153 @@
+@font-face {
+    font-family: 'montserratbold';
+    src: url(./fonts/montserrat-bold-webfont.woff2) format('woff2'),
+         url(fonts/montserrat-bold-webfont.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'montserratsemibold';
+    src: url(fonts/montserrat-semibold-webfont.woff2) format('woff2'),
+         url(fonts/montserrat-semibold-webfont.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html {
+    background-color: #26221e
+}
+
+h1 {
+    font-family: 'montserratbold';
+    font-size: 100px;
+    line-height: 0.7;
+    text-align: center;
+    margin: -3% auto 10% auto;
+    max-width: 500px;
+    justify-content: center;
+    align-items: center;
+    color:  #bf4226;
+    animation: 2.5s shake infinite alternate;
+}
+
+h2 {
+    font-family: 'montserratsemibold';
+    font-size: 12px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: #bf5b45
+}
+
+p {
+    font-family: 'Times New Roman', Times, serif;
+    color:  #e9e6db;
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+div {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.credits {
+    display: flex;
+    flex-direction: column;
+}
+
+.shake {
+    color:  #bf4226;
+    animation: 0.8s shake infinite alternate;
+}
+
+.custom-cur {
+    cursor: url('cursor.png');
+  }
+  
+  /* With a .cur fallback */
+  .custom-cur {
+    cursor: url('cursor.png'),
+    url('cursor.png');
+  }
+  
+  /* With a custom hotspot */
+  .custom-cur {
+    cursor: url('cursor.png') 10 12;
+  }
+  
+  /* With a non-custom fallback: */
+  .custom-cur {
+    cursor: url('cursor.png'),
+    move;
+  }
+
+.reveal { opacity: 20%; transition: opacity 0.5s linear; }
+
+.reveal:hover {
+   	opacity: 100%;
+}
+@keyframes shake {
+    0% { transform: skewX(-15deg); }
+    5% { transform: skewX(15deg); }
+    10% { transform: skewX(-15deg); }
+    15% { transform: skewX(15deg); }
+    20% { transform: skewX(0deg); }
+    100% { transform: skewX(0deg); }  
+  }
+
+@media screen and (min-width: 481px) {
+    h1 {
+        margin: -1.8% auto 10% auto;
+        font-size: 8em;
+        text-align: center;
+    }
+
+    .credits {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .author {
+        text-align: left;
+        flex: 1
+    }
+
+    .designer {
+        text-align: right;
+        flex: 1
+    }
+
+    p {
+        max-width: 70%;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    h1 {
+        margin: -1.2% auto auto auto;
+        font-size: 10em;
+        max-width: 700px;
+    }
+    p {
+        max-width: 70%;
+        margin: auto;
+        font-size: 26px;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    h1 {
+        margin: -0.5% auto auto auto;
+        font-size: 12em;
+        max-width: 800px;
+    }
+    p {
+        max-width: 70%;
+        margin: auto;
+    }
+}
