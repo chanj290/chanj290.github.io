@@ -1,0 +1,218 @@
+@font-face {
+    font-family: 'montserratbold';
+    src: url(./fonts/montserrat-bold-webfont.woff2) format('woff2'),
+         url(fonts/montserrat-bold-webfont.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'montserratsemibold';
+    src: url(fonts/montserrat-semibold-webfont.woff2) format('woff2'),
+         url(fonts/montserrat-semibold-webfont.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html {
+    background-color: #26221e;
+    font-family: 'Times New Roman', Times, serif;
+    color: #e9e6db;
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex
+}
+.text {
+    font-family: "Montserrat";
+    font-size: 20px;
+    color: #bf4226;
+    justify-content: center;
+    align-items: center;
+}
+.dud {
+  color: #e9e6db;
+}
+
+*
+  box-sizing border-box
+
+:root {
+  --coefficient: 1.25;
+}
+
+.container-wrapper {
+  height: 75vmin;
+  width: 75vmin;
+  padding: 5vmin;
+}
+
+.container1 {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.motion {
+  font-weight: bold;
+  font-size: 5vmin;
+  font-family: sans-serif;
+}
+  .char {
+    offset-path: path(var(--path));
+    position: absolute;
+    color: #bf4226;
+    top: 0;
+    left: 0;
+    animation: travel 10s -8s infinite ease alternate
+  }
+
+div {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.credits {
+    display: flex;
+    flex-direction: column;
+}
+
+.shake {
+	display:block;
+	position:relative;
+    display:inline-block;
+    color: #bf4226;
+    animation: infinite;
+}
+
+@-webkit-keyframes spaceboots {
+	0% { -webkit-transform: translate(2px, 1px) rotate(0deg); }
+	10% { -webkit-transform: translate(-1px, -2px) rotate(-1deg); }
+	20% { -webkit-transform: translate(-3px, 0px) rotate(1deg); }
+	30% { -webkit-transform: translate(0px, 2px) rotate(0deg); }
+	40% { -webkit-transform: translate(1px, -1px) rotate(1deg); }
+	50% { -webkit-transform: translate(-1px, 2px) rotate(-1deg); }
+	60% { -webkit-transform: translate(-3px, 1px) rotate(0deg); }
+	70% { -webkit-transform: translate(2px, 1px) rotate(-1deg); }
+	80% { -webkit-transform: translate(-1px, -1px) rotate(1deg); }
+	90% { -webkit-transform: translate(2px, 2px) rotate(0deg); }
+	100% { -webkit-transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+@keyframes travel
+  from {
+    offset-distance calc((var(--char-index) * var(--coefficient)) * 1%)
+}
+  to {
+    offset-distance calc((100 - ((var(--char-total) - var(--char-index)) * var(--coefficient))) * 1%)
+  }
+
+ .shake {
+	-webkit-animation-name: spaceboots;
+	-webkit-animation-duration: 0.8s;
+	-webkit-transform-origin:50% 50%;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+}
+
+.reveal { opacity: 20%; transition: opacity 0.5s linear; }
+
+.reveal:hover {
+   	opacity: 100%;
+}
+@keyframes shake {
+    0% { transform: skewX(-15deg); }
+    5% { transform: skewX(15deg); }
+    10% { transform: skewX(-15deg); }
+    15% { transform: skewX(15deg); }
+    20% { transform: skewX(0deg); }
+    100% { transform: skewX(0deg); }  
+  }
+
+@media screen and (min-width: 481px) {
+    .container {
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        display: flex
+      }
+    .text {
+          font-family: "Montserratbold";
+          font-size: 40px;
+          color: #bf4226;
+          justify-content: center;
+          align-items: center;
+      }
+
+    .credits {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .author {
+        text-align: left;
+        flex: 1
+    }
+
+    .designer {
+        text-align: right;
+        flex: 1
+    }
+
+    p {
+        max-width: 80%;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    p {
+        max-width: 70%;
+        margin: auto;
+        font-size: 26px;
+    }
+    .container {
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        display: flex
+      }
+    .text {
+          font-family: "Montserratbold";
+          font-size: 65px;
+          color: #bf4226;
+          justify-content: center;
+          align-items: center;
+      }
+}
+
+@media screen and (min-width: 1025px) {
+    p {
+        max-width: 70%;
+        margin: auto;
+    }
+    .container {
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        display: flex
+      }
+    .text {
+          font-family: "Montserratbold";
+          font-size: 90px;
+          color: #bf4226;
+          justify-content: center;
+          align-items: center;
+      }
+}
