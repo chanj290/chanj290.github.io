@@ -107,22 +107,6 @@ div {
 	100% { -webkit-transform: translate(1px, -2px) rotate(-1deg); }
 }
 
-@keyframes travel
-  from {
-    offset-distance calc((var(--char-index) * var(--coefficient)) * 1%)
-}
-  to {
-    offset-distance calc((100 - ((var(--char-total) - var(--char-index)) * var(--coefficient))) * 1%)
-  }
-
- .shake {
-	-webkit-animation-name: spaceboots;
-	-webkit-animation-duration: 0.8s;
-	-webkit-transform-origin:50% 50%;
-	-webkit-animation-iteration-count: infinite;
-	-webkit-animation-timing-function: linear;
-}
-
 .reveal { opacity: 20%; transition: opacity 0.5s linear; }
 
 .reveal:hover {

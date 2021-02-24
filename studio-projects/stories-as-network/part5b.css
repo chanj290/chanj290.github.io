@@ -20,30 +20,30 @@ html {
     background-color: #26221e
 }
 
-.container {
-  height: 100%;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  display: flex
-}
-.text {
-    font-family: "Montserratbold";
-    font-size: 28px;
-    color: #bf4226;
-    justify-content: center;
-    align-items: center;
-}
-.dud {
-  color: #e9e6db;
-}
-
 p {
     font-family: 'Times New Roman', Times, serif;
     color:  #e9e6db;
     font-size: 20px;
     line-height: 1.4;
 }
+
+.container {
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex
+  }
+  .text {
+      font-family: "Montserratbold";
+      font-size: 28px;
+      color: #bf4226;
+      justify-content: center;
+      align-items: center;
+  }
+  .dud {
+    color: #e9e6db;
+  }
 
 div {
     margin-top: 5%;
