@@ -59,6 +59,8 @@ div {
     flex-direction: column;
 }
 
+
+
 .reveal { opacity: 10%; transition: opacity 0.5s linear; }
 
 .reveal:hover {
@@ -188,10 +190,15 @@ div {
 @import "bourbon";
 
 .explode {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'montserrat', sans-serif;
   text-transform: uppercase;
   font-size: 64px;
   text-align: center;
+  
+}
+
+span {
+    display: inline-block
 }
 
 @media screen and (min-width: 481px) {
