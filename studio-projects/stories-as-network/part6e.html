@@ -43,7 +43,7 @@
             </p>
             <br>
             <p>    
-                In some ways, “hormonal” is the modern-day “hysterical” – a word most women will have their own associations with. Mine are profuse. Years and years of secretly believing that I am just on the cusp of losing control: of my emotions, my appetite, my sexuality. Sometimes, I think I’m a hair-trigger away from <span class="explode">exploding.</span> Because I’ve quietly believed I’m… well, too much. Almost every woman I have known well has spoken of this belief; one they mostly keep tucked up, because admitting the fear means facing the idea that maybe we don’t have inherent autonomy; that our woman-ness will always “get” us in the end. What if there was a different way of looking at things? What if we could work towards dismantling the self-blame and, therefore, stop othering this fundamental part of who we are?
+                In some ways, “hormonal” is the modern-day “hysterical” – a word most women will have their own associations with. Mine are profuse. Years and years of secretly believing that I am just on the cusp of losing control: of my emotions, my appetite, my sexuality. Sometimes, I think I’m a hair-trigger away from <span id="explode" class="explode">exploding.</span> Because I’ve quietly believed I’m… well, too much. Almost every woman I have known well has spoken of this belief; one they mostly keep tucked up, because admitting the fear means facing the idea that maybe we don’t have inherent autonomy; that our woman-ness will always “get” us in the end. What if there was a different way of looking at things? What if we could work towards dismantling the self-blame and, therefore, stop othering this fundamental part of who we are?
             </p>
             <br>
             <p>     
@@ -90,6 +90,9 @@
                 Are we saving up anger, our base need for affection, and our tears for three weeks of the month? As our hormonal levels shift, could they be acting as a kind of “truth serum”, lubricating the passage of what we really want to say or do? It’s a radical idea and I quite like it. What if what we feel during those times of the month when we are so quick to say we are being irrational is the most “real” we are? The science surrounding whatever signalling changes happen in the emotion-processing parts of our brain during the menstrual cycle is too fuzzy to definitively say otherwise. Could it be that, when the mantle of self-censorship drops and we are less caught up with fearing how we’ll be seen, we’re accessing all that historical oppression and, in short bursts, letting it go? All that so-called “excess”, the stuff that makes a woman “hysterical” could just be… <span class="reveal">truth</span>.
             </p>
         </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/0.11.9/jquery.velocity.min.js"></script>
+
         <script>
           
             class TextScramble {
@@ -180,22 +183,28 @@ function getRandom(min, max) {
   return Math.random() * (max - min) + min;
 }
 
-$("span").blast({ delimiter: "character" });
-$("span").hover(
+$("#explode").blast({ delimiter: "character" });
+$("#explode").hover(
   function(){
-    var $spans = $(this).find('span');
-    $spans.each(function(){
-      var offsetX = getRandom(-300, 300);
-      var offsetY = getRandom(-20, 20);
-      var scale = getRandom(.5, 3);
-      $(this).velocity({translateX : offsetX, translateY: offsetY, scale: scale, color: '#990000'}, 300, [ 50, 5 ]);
-    });
-  },
-  function(){
-    var $spans = $(this).find('span');
-    $spans.each(function(){;
-                           $(this).velocity({translateX : 0, translateY: 0, scale: 1, color: '#000'}, 100);
-    });
+    console.log($(this));
+    var offsetX = getRandom(-300, 300);
+    var offsetY = getRandom(-20, 20);
+    var scale = getRandom(.5, 3);
+    $(this).velocity({translateX : offsetX, translateY: offsetY, scale: scale, color: '#990000'}, 300, [ 50, 5 ]);
+    $(this).velocity({translateX : 0, translateY: 0, scale: 1, color: '#000'}, 100);
+    // var $spans = $(this).find('span');
+    // $spans.each(function(){
+    //   var offsetX = getRandom(-300, 300);
+    //   var offsetY = getRandom(-20, 20);
+    //   var scale = getRandom(.5, 3);
+    //   $(this).velocity({translateX : offsetX, translateY: offsetY, scale: scale, color: '#990000'}, 300, [ 50, 5 ]);
+    // });
+  // },
+  // function(){
+  //   var $spans = $(this).find('span');
+  //   $spans.each(function(){;
+                           
+  //   });
   }
 );
 </script>
