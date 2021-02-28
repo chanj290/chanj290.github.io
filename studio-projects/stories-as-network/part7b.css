@@ -59,12 +59,16 @@ div {
     flex-direction: column;
 }
 
-
-
-.reveal { opacity: 10%; transition: opacity 0.5s linear; }
+.reveal { 
+    opacity: 10%; 
+    transition: opacity 0.5s linear;
+    text-decoration: underline;
+}
 
 .reveal:hover {
    	opacity: 100%;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .shake {
@@ -93,43 +97,28 @@ div {
 	-webkit-transform-origin:50% 50%;
 	-webkit-animation-iteration-count: infinite;
 	-webkit-animation-timing-function: linear;
-}
-
-.reveal { opacity: 20%; transition: opacity 0.5s linear; }
-
-.reveal:hover {
-   	opacity: 100%;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .glow {
-    font-style:italic;
     color: #e9e6db;
-  }
-  
-  a:link {
-    text-decoration: none;
-  }
-  
-  a:visited {
-    text-decoration: none;
-    color: #e9e6db;
-  }
-  
-  a {
-    color:#e9e6db;
+    text-decoration: underline;
     -moz-transition: all 0.2s ease-in;
     -o-transition: all 0.2s ease-in;
     -webkit-transition: all 0.2s ease-in;
     transition: all 0.2s ease-in;
   }
   
-  a:hover {
+  .glow:hover {
     color: #e9e6db;
+    cursor: pointer;
     text-shadow:0px 0px 30px #e9e6db;
     -moz-transition: all 0.2s ease-in;
     -o-transition: all 0.2s ease-in;
     -webkit-transition: all 0.2s ease-in;
     transition: all 0.2s ease-in;
+    text-decoration: none;
   }
 
 @keyframes shake {
@@ -141,6 +130,22 @@ div {
     100% { transform: skewX(0deg); }  
   }
 
+.blur {
+    transition: all 3s ease-in-out;
+    -webkit-transition: all 3s ease-in-out;
+    -moz-transition: all 3s ease-in-out;
+    -ms-transition: all 3s ease-in-out;
+    -o-transition: all 3s ease-in-out;
+    transform: translateX(-50%);
+    text-decoration: underline;
+  }
+
+.blur:hover {
+    filter: blur(80px);  
+    cursor: pointer;
+    text-decoration: none;
+}
+
 .pulse {
   color:#e9e6db;
   background: #bf422698;
@@ -148,10 +153,15 @@ div {
   margin: 10px;
   height: 20px;
   width: 20px;
-
+  cursor: pointer;
+  text-decoration: underline;
   box-shadow: 0 0 0 0 rgb(206, 116, 116);
   transform: scale(1);
   animation: pulse 2s infinite;
+}
+
+.pulse:hover {
+    text-decoration: none;
 }
 
 @keyframes pulse {
@@ -171,20 +181,60 @@ div {
   }
 }
 
-.upsidedown{
-    transition: all 0.4s ease;
-    font-weight: bold;
-  }
-  .upsidedown:hover {
-    transition: all 0.4s ease;
-    transform: scaleY(-1);
-  }
-
-.grow {
-    transition: all .2s ease-in-out;
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;   
 }
-.grow:hover {
-    transform: scale(1.1);
+
+.canvas {
+    width: 9vw;
+    height: 4vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.rotate {
+    transition: all 1.5s ease-in-out;
+    -webkit-transition: all 1.5s ease-in-out;
+    -moz-transition: all 1.5s ease-in-out;
+    -ms-transition: all 1.5s ease-in-out;
+    -o-transition: all 1.5s ease-in-out;
+    text-decoration: underline;
+    display: inline-block
+}
+
+.rotate:hover {
+    transform: rotate(180deg);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.float {
+	margin: 0 10px;
+    text-decoration: underline;
+    display: inline-block
+}
+
+.float:hover {
+	margin: 0 10px;
+	transition: all 0.4s ease-in-out;
+	overflow: hidden;
+	transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
 }
 
 @import "bourbon";
@@ -192,13 +242,58 @@ div {
 .explode {
     font-family: 'Times New Roman', Times, serif;
     color:  #e9e6db;
-    font-size: 20px;
     text-align: center;
-    font-kerning: ;
+    text-decoration: underline;
+}
+
+.explode:hover {
+    cursor: pointer;
+    text-decoration: none;
 }
 
 #explode {
     display: inline-block
+}
+
+.color {
+    text-decoration: underline;
+}
+.color:hover {
+    transform: translate(-50%, -50%);
+    font-style: italic;
+    color:red;
+    cursor: pointer;
+    text-decoration: none;
+}
+.disconnected {
+    text-decoration: underline;
+}
+.disconnected:hover {
+    text-decoration: none;
+}
+
+.letter{
+	display: inline-flex;
+	height: 7px;
+	width: 5px;
+	/* border: 2.5px solid #FF1EAD; */
+	border: 2.35px solid #e9e6db;
+	border-radius: 15px;
+	animation: none
+}
+.letter:hover{
+	display: inline-flex;
+	height: 7px;
+	width: 5px;
+	/* border: 2.5px solid #FF1EAD; */
+	border: 2.35px solid #e9e6db;
+	border-radius: 15px;
+	animation: letter 2s ease-in-out infinite alternate;
+}
+
+@keyframes letter {
+	0%,30%{ width: 25px; }
+	70%,100%{ width: 30vw; }
 }
 
 @media screen and (min-width: 481px) {
@@ -229,9 +324,9 @@ div {
     }
 
     .pulse {
-        color:#bf5b45;
         animation: none;
         background: none;
+        text-decoration: underline;
     }
     .pulse:hover {
       color:#e9e6db;
@@ -240,7 +335,7 @@ div {
       margin: 10px;
       height: 20px;
       width: 20px;
-  
+      text-decoration: none;
       box-shadow: 0 0 0 0 rgb(206, 116, 116);
       transform: scale(1);
       animation: pulse 2s infinite;
@@ -275,10 +370,6 @@ div {
     p {
         max-width: 65%;
         margin: auto;
-        font-size: 26px;
-    }
-
-    .explode {
         font-size: 26px;
     }
 }
