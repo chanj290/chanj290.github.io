@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Move</title>
+        <meta charset="utf-8"/>
+        <style>
+            body {
+                background-color:crimson;
+            }
+
+            .canvas {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                font-size: 150px;
+                text-align: center;
+                color: black;
+                font-style: italic;
+            }
+
+            .phrase1, .phrase2 {
+                -webkit-transition: all .5s ease-in-out;
+                -moz-transition: all 3s ease-in-out;
+                -ms-transition: all .5s ease-in-out;
+                -o-transition: all .2s ease-in-out;
+                border: 3px solid white;
+                border-radius: 150px;
+                padding: 40px;
+            }
+                
+            .phrase1:hover {
+                transform: translateX(-800px);
+                cursor: pointer;
+            }
+
+
+            .phrase2:hover {  
+                transform: translateX(20px);  
+                cursor: pointer;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="canvas">
+            <p class="phrase1">Tickle Me</p>
+            <p class="phrase2">Elmo</p>
+        </div>
+    </body>
+</html>

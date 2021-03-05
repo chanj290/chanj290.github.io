@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rotate</title>
+        <meta charset="utf-8"/>
+        <style>
+            * {
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+
+            body {
+                background-color: lightpink;
+                overflow: hidden;
+            }
+
+            .canvas {
+                width: 100vw;
+                height: 100vh;
+                padding-top: 10px;
+                position: relative;
+            }
+
+            p {
+                font-family: cursive;
+                font-size: 150px;
+                text-align: center;
+                color:salmon
+            }
+
+            .phrase1, .phrase2 {
+                transition: all 1.5s ease-in-out;
+                -webkit-transition: all 1.5s ease-in-out;
+                -moz-transition: all 1.5s ease-in-out;
+                -ms-transition: all 1.5s ease-in-out;
+                -o-transition: all 1.5s ease-in-out;
+            }
+
+            .phrase1:hover {
+                transform: rotate(180deg);
+                cursor: pointer;
+            }
+
+            .phrase2:hover {
+                transform: rotate(-100deg);
+                cursor: pointer;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="canvas">
+            <p class="phrase1">Sweet</p>
+            <p class="phrase2">Shrimp</p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Background Color</title>
+        <meta charset="utf-8"/>
+        <style>
+         body {
+                background-color: burlywood;
+            }
+
+            .canvas {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                font-size: 150px;
+                text-align: center;
+                color: peru;
+                font-family: "Comic Sans MS", "Comic Sans", cursive;
+                text-transform: lowercase;
+            }
+
+            .phrase1, .phrase2 {
+                -webkit-transition: all 1s ease-in-out;
+                -moz-transition: all 1s ease-in-out;
+                -ms-transition: all 1s ease-in-out;
+                -o-transition: all 1s ease-in-out;
+                padding: 20px;
+            }
+                
+            .phrase1:hover {
+                color: burlywood;  
+                cursor: pointer;
+            }
+
+
+            .phrase2:hover {  
+                color: burlywood;  
+                cursor: pointer;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div class="canvas">
+            <p class="phrase1">Chicken</p>
+            <p class="phrase2">Tendies</p>
+        </div>
+    </body>
+</html>

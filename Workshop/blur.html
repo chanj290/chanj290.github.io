@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Blur</title>
+        <meta charset="utf-8"/>
+        <style>
+            body {
+                background-color: darkslateblue;
+            }
+
+            .canvas {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                font-size: 150px;
+                text-align: center;
+                color:black;
+                font-family: sans-serif;
+                text-transform: uppercase;
+            }
+
+            .phrase1, .phrase2 {
+                transition: all 3s ease-in-out;
+                -webkit-transition: all 3s ease-in-out;
+                -moz-transition: all 3s ease-in-out;
+                -ms-transition: all 3s ease-in-out;
+                -o-transition: all 3s ease-in-out;
+                padding: 20px;
+            }
+                
+            .phrase1:hover {
+                filter: blur(80px);  
+                cursor: pointer;
+            }
+
+
+            .phrase2:hover {  
+                filter: blur(80px);  
+                cursor: pointer;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div class="canvas">
+            <p class="phrase1">Mysterious</p>
+            <p class="phrase2">Hippo</p>
+        </div>
+    </body>
+</html>
