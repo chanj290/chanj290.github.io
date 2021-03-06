@@ -23,7 +23,7 @@ html {
 }
 
 h1 {
-    font-family: 'montserratbold';
+    font-family: 'montserratbold', sans-serif;
     font-size: 90px;
     line-height: 0.85;
     text-align: center;
@@ -45,7 +45,7 @@ h1 {
   }
 
 h2 {
-    font-family: 'montserratsemibold';
+    font-family: 'montserratsemibold', sans-serif;
     font-size: 12px;
     text-align: center;
     justify-content: center;
