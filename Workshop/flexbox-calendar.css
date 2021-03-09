@@ -1,0 +1,56 @@
+/* Full Website */ 
+
+html {
+    background: #e6ddc5;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+/* Row 1: Month Title */ 
+
+.container {
+    margin: 10px
+}
+
+h1 {
+    font-size: 20pt;
+}
+
+.march {
+    font-size: 60pt;
+}
+
+/* Row 2: Grid */      
+
+h2 {
+    font-size: 12pt;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 10px
+}
+
+.weekday {
+    width: 12%;
+    height: auto;
+    background-color: rgb(255, 253, 244);
+    margin: 0.5%;
+    text-align: center;
+    padding: 10px;
+}
+
+.unit {
+    width: 12%;
+    height: 150px;
+    background-color: rgb(252, 247, 225);
+    margin: 0.5%;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.events {
+    background: rgb(255, 255, 255);
+}
