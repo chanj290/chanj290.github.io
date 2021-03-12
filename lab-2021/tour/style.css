@@ -1,0 +1,33 @@
+html {
+	margin: 0 15% 0 15%;
+	font-size: 100%;
+	font-family: Roboto, sans-serif;
+	line-height: 1.6;
+	background-image: linear-gradient(#F6CEAC, #F7B7C1, #EAC5D7);
+}
+
+a:link {
+	color:#ffa0ae;
+}
+
+a:visited {
+	color:#ff8851;
+}
+
+a:hover {
+	color:#ff8c8c;
+}
+
+a:active {
+	color:bisque;
+}
+
+.container {
+    display: flex;
+	flex-direction: column;
+}
+
+.responsive {
+    max-width: 70%;
+    height: auto;
+}

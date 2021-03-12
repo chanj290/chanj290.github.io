@@ -1,9 +1,12 @@
 /* Full Website */ 
-
 html {
+    box-sizing: border-box;
     background: #e6ddc5;
     font-family: Helvetica, Arial, sans-serif;
-}
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
 
 /* Row 1: Month Title */ 
 
@@ -29,26 +32,24 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 10px
+    padding: 10px
 }
 
 .weekday {
-    width: 12%;
+    width: 14.28%;
     height: auto;
     background-color: rgb(255, 253, 244);
-    margin: 0.5%;
+    padding: 0.5%;
     text-align: center;
-    padding: 10px;
 }
 
 .unit {
-    width: 12%;
-    height: 150px;
-    background-color: rgb(252, 247, 225);
-    margin: 0.5%;
+    width: 14.28%;
+    height: 200px;
+    background-color: rgba(252, 247, 225, 0.842);
+    padding: 0.5%;
     text-align: center;
-    padding: 10px;
-    border-radius: 10px;
+    border-radius: 50px;
 }
 
 .events {
