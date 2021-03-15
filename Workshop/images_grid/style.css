@@ -1,0 +1,59 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+html,body{
+	background:#282828;
+	margin: 5%
+}
+
+img{
+	position: relative;
+	float: center;
+	width: auto;
+	height: 300px;
+}
+
+h1{
+	width: 50%;
+	text-align: center;
+	margin:35px auto;
+	padding:14px;
+	color:#282828;
+	background:white;
+	font-family: monospace;
+	font-size: 20px;
+	text-transform: lowercase;
+}
+
+select{
+	font-size:15px;
+	margin-bottom: 20px;
+	font-family: monospace;
+}
+
+@media screen and (max-width: 768px) {
+		img{
+			position: relative;
+			float: center;
+			width: auto;
+			height: 200px;
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
