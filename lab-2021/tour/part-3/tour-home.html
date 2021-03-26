@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MTR Tour Home</title>
+        <link rel="stylesheet" type="text/css" href="css/style-home.css">
+    </head>
+    <body>
+        <div class="container">
+            <button onclick="myFunction()">Welcome!</button>
+            <br>
+            <H1>Hong Kong <span class="blue">MTR</span> Journey</H1>
+            <img src="../images/mtr-logo.png" class="responsive">
+            <button onclick="document.location='tour-1.html'">Start</button>
+        </div>
+
+        <script>
+            function myFunction() {
+            var txt;
+            if (confirm("Are you ready?")) {
+                txt = "You pressed OK!";
+            } else {
+                txt = "You pressed Cancel!";
+            }
+            document.getElementById("demo").innerHTML = txt;
+            }
+        </script>
+    </body>
+
+</html>

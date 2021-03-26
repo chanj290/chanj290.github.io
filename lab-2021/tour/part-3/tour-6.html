@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tour Checkpoint 6</title>
+        <link rel="stylesheet" type="text/css" href="../part-2/css/style-4.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>You alight the train.</h1>
+            <p>You hear the train closing behind you with beeping noises warning people to stand back.</p>
+            <audio controls autoplay>
+                <source src="../sounds/train-beeping.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div class="container">
+            <button onclick="myFunction()">Follow the exit sign.</button>
+            <br>
+            <video class="responsive" controls>
+                <source src="../images/16.mp4" type=video/mp4>
+            </video>
+        </div>
+        <div class="container">
+            <button onclick="document.location='tour-7.html'">Go Up the Escalator</button>
+        </div>
+
+        <script>
+            function myFunction() {
+            var txt;
+            if (confirm("Find the escalator that leads to the exit.")) {
+                txt = "You pressed OK!";
+            } else {
+                txt = "You pressed Cancel!";
+            }
+            document.getElementById("demo").innerHTML = txt;
+            }
+        </script>
+
+    </body>
+
+</html>

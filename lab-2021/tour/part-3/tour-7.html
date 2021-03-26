@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Checkpoint 7</title>
+    <link rel="stylesheet" type="text/css" href="../part-2/css/style-4.css">
+</head>
+<body>
+    <div class="container">
+        <h1>You're at the concourse.</h1>
+        <p>A swarm of people walk towards the turnstile. Everyone, but the old grannies, seems to be rushing to get to there first. A blob of people gradually filters into organized lines that match up to the turnstiles.</p>
+        <button onclick="myFunction()">Beep your Octopus card.</button>
+        <br>
+        <video class="responsive" controls>
+            <source src="../images/17.mp4" type=video/mp4>
+        </video>
+    </div>
+    <div class="container">
+        <button onclick="document.location='tour-8.html'">Tap My Octopus Card</button>
+    </div>
+
+    <script>
+        function myFunction() {
+        var txt;
+        if (confirm("You hear the familiar 'beep' of the Octopus cards again.")) {
+            txt = "You pressed OK!";
+        } else {
+            txt = "You pressed Cancel!";
+        }
+        document.getElementById("demo").innerHTML = txt;
+        }
+    </script>
+
+</body>
+
+</html>

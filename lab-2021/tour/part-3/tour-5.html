@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tour Checkpoint 5</title>
+        <link rel="stylesheet" type="text/css" href="../part-2/css/style-4.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>The train doors open.</h1>
+            <p>You sigh in relief as there isn't the usual crowd of passengers that stream out of the doors.</p>
+            <video class="responsive" controls>
+                <source src="../images/14.mp4" type=video/mp4>
+            </video>
+        </div>
+        <div class="container">
+            <p>Thankfully, there are unoccupied seats. If this was during rush hour, there would be a swarm of people. All of the seats would be taken, while the designated seats in red would be reserved for the elderly, disabled, or pregnant women. When people go to work or get off work, the trains are usually packed with people, leaving you feeling claustrophobic with no personal space.</p>
+            <audio controls autoplay>
+                <source src="../sounds/inside-train.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+            <p>As you shuffle over to find a seat, you pass by elderly women with grocerries from the wet market poking out from their trolley, a few college students finishing up some homework on their iPad, and a majority of passengers passing time on their phones. Everyone seems a little tired so it is relatively quiet, accompanied by train ambience.</p>
+            <button onclick="myFunction()">It's almost your stop!</button>
+            <br>
+            <img src="../images/15.jpg" class="responsive">
+        </div>
+        <div class="container">
+            <button onclick="document.location='tour-6.html'">Get Off the Train</button>
+        </div>
+
+        <script>
+            function myFunction() {
+            var txt;
+            if (confirm("Are you ready to alight?")) {
+                txt = "You pressed OK!";
+            } else {
+                txt = "You pressed Cancel!";
+            }
+            document.getElementById("demo").innerHTML = txt;
+            }
+        </script>
+
+    </body>
+
+</html>

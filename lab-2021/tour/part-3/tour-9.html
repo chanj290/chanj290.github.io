@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Checkpoint 9</title>
+    <link rel="stylesheet" type="text/css" href="../part-2/css/style-4.css">
+</head>
+<body>
+    <div class="container">
+        <h1>You see Exit A on the other side of the station.</h1>
+        <p>You pass by similar shops that you saw at the station you started at as you walk through the station.</p>
+        <button onclick="myFunction()">You make it to Exit A and you have arrived at your destination.</button>
+        <br>
+        <img src="../images/19.jpg" class="responsive">
+        <h2></h2>
+    </div>
+    <div class="container">
+        <button onclick="document.location='tour-home.html'">Return to Home</button>
+    </div>
+
+    <script>
+        function myFunction() {
+        var txt;
+        if (confirm("Congrats, you made your way through Hong Kong by taking the MTR!")) {
+            txt = "You pressed OK!";
+        } else {
+            txt = "You pressed Cancel!";
+        }
+        document.getElementById("demo").innerHTML = txt;
+        }
+    </script>
+
+</body>
+
+</html>
