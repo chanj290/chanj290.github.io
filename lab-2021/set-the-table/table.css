@@ -1,0 +1,66 @@
+body {
+    background-color: snow;
+    width: 100%;
+  
+  }
+  .container {
+    position: relative;
+    margin: 20px auto;
+    height: 1200px;
+    width: 90%;
+    background-color: bisque;
+  }
+
+  .napkin-style {
+    position: absolute;
+    top: 200px;
+    left: 1000px;
+    display: block;
+    width: 100px;
+    height: auto
+  }
+
+  .bowl-style {
+    position: absolute;
+    top: 800px;
+    left: 600px;
+    display: block;
+    width: 100px;
+    height: auto
+  }
+
+  .wine-glass-style {
+    position: absolute;
+    top: 1000px;
+    left: 10px;
+    display: block;
+    width: 100px;
+    height: auto
+  }
+
+  .plate-style {
+    position: absolute;
+    top: 600px;
+    left: 200px;
+    display: block;
+    width: 100px;
+    height: auto
+  }
+
+  .knife-style {
+    position: absolute;
+    top: 10px;
+    left: 700px;
+    display: block;
+    width: 100px;
+    height: auto
+  }
+
+  .fork-style {
+    position: absolute;
+    top: 500px;
+    left: 1200px;
+    display: block;
+    width: 100px;
+    height: auto
+  }
