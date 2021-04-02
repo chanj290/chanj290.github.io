@@ -21,6 +21,16 @@ h2 {
     font-weight: 100;
 }
 
+a {
+    text-decoration: none;
+    color: white
+   }
+
+.links {
+    text-decoration: none;
+    color: black
+}
+
 .container {
     display: flex;
     flex-direction: row;
@@ -45,14 +55,32 @@ h2 {
     background: #BD0F45;
     width: 150px;
     height: 150px;
-    border-radius: 100px;
+    border-radius: 500px;
     color: white;
     font-weight: 100;
-    line-height: 120px;
+    text-align: center;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    top: 3630px;
+    left: 100px;
+    transition: width 4s, height 4s, line-height 4s;
+    display: flex;
+    align-items: center;
+}
+
+ .button:hover {
+    background: #BD0F45;
+    width: 300px;
+    height: 300px;
+    border-radius: 500px;
+    color: white;
+    font-weight: 100;
     text-align:center;
     cursor: pointer;
-    flex: 1;
-}
+    display: flex;
+    align-items: center;
+} 
 
 .responsive {
     width: 100%;

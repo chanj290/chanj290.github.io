@@ -21,6 +21,11 @@ h2 {
     font-weight: 100;
 }
 
+a {
+    text-decoration: none;
+    color: white
+   }
+
 .container {
     display: flex;
     flex-direction: row;
@@ -75,16 +80,7 @@ h2 {
 }
 
 .fun-fact {
-    background: #F2F2F2;
-    width: 150px;
-    height: 150px;
-    border-color: #BD0F45;
-    border-width: 200px;
-    border-radius: 100px;
     font-weight: 100;
-    line-height: 120px;
-    text-align:center;
-    cursor: pointer;
 }
 
 
@@ -92,14 +88,32 @@ h2 {
     background: #BD0F45;
     width: 150px;
     height: 150px;
-    border-radius: 100px;
+    border-radius: 500px;
     color: white;
     font-weight: 100;
-    line-height: 120px;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    top: 1800px;
+    left: 600px;
+    transition: width 4s, height 4s, line-height 4s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ .button:hover {
+    background: #BD0F45;
+    width: 300px;
+    height: 300px;
+    border-radius: 500px;
+    color: white;
+    font-weight: 100;
     text-align:center;
     cursor: pointer;
-    flex: 1;
-}
+    display: flex;
+    align-items: center;
+} 
 
 .responsive {
     width: 100%;
