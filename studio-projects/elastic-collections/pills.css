@@ -1,0 +1,186 @@
+body {
+    background-color: white;
+    width: 100%;
+  
+  }
+.container {
+  position: relative;
+  margin: auto;
+  height: 1000px;
+  width: 1650px;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  position: center;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.shape {
+  display: flex;
+  flex-direction: row;
+  position: center;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#circle {
+  width: 100px;
+  height: 100px;
+  background: gainsboro;
+  border-radius: 50%
+}
+
+#oval {
+  width: 200px;
+  height: 100px;
+  background: gainsboro;
+  border-radius: 100px / 50px;
+}
+
+#capsule {
+  width: 200px;
+  height: 100px;
+  background: gainsboro;
+  border-radius: 60px;
+}
+  
+#square {
+  width: 100px;
+  height: 100px;
+  background: gainsboro;
+  border-radius: 20px;
+}
+
+#rectangle {
+  width: 200px;
+  height: 100px;
+  background: gainsboro;
+  border-radius: 20px;
+}
+
+#triangle {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid gainsboro;
+}
+
+#octagon {
+  width: 110px;
+  height: 140px;
+  background: gainsboro;
+  position: relative;
+}
+#octagon:before {
+  content: "";
+  width: 50px;
+  height: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-bottom: 30px solid gainsboro;
+  border-left: 30px solid black;
+  border-right: 30px solid black;
+}
+#octagon:after {
+  content: "";
+  width: 50px;
+  height: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-top: 30px solid gainsboro;
+  border-left: 30px solid black;
+  border-right: 30px solid black;
+}
+
+/* .pills {
+  z-index: 9;
+  cursor: move;
+  z-index: 10;
+  background-color: #2196F3;
+  color: #fff;
+}  */
+
+.circle {
+  position: absolute;
+  top: 200px;
+  left: 1000px;
+  display: block;
+  width: 50px;
+  height: auto
+}
+
+.oval {
+  position: absolute;
+  top: 200px;
+  left: 50px;
+  display: block;
+  width: 50px;
+  height: auto
+}
+
+.square {
+  position: absolute;
+  top: 200px;
+  left: 500px;
+  display: block;
+  width: 50px;
+  height: auto
+}
+
+.rectangle {
+  position: absolute;
+  top: 200px;
+  left: 700px;
+  display: block;
+  width: 50px;
+  height: auto
+}
+
+.capsule {
+  position: absolute;
+  top: 200px;
+  left: 200px;
+  display: block;
+  width: 50px;
+  height: auto
+}
+
+.triangle {
+  position: absolute;
+  top: 200px;
+  left: 300px;
+  display: block;
+  width: 50px;
+  height: auto
+}
+
+.diamond {
+  position: absolute;
+  top: 200px;
+  left: 600px;
+  display: block;
+  width: 50px;
+  height: auto
+}
+
+.octagon {
+  position: absolute;
+  top: 200px;
+  left: 900px;
+  display: block;
+  width: 50px;
+  height: auto
+}
+
+.polygon {
+  position: absolute;
+  top: 200px;
+  left: 800px;
+  display: block;
+  width: 50px;
+  height: auto
+}
