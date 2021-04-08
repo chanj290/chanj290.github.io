@@ -1,17 +1,28 @@
+html {
+  background-color: rgb(247, 0, 255);
+}
+
 body {
-    background-color: white;
-    width: 100%;
-  
-  }
-.container {
-  position: relative;
-  margin: auto;
-  height: 1000px;
-  width: 1650px;
-  background-color: black;
+  background-color: rgb(247, 0, 255);
+  width: 100%;
+
+}
+
+h1 {
+  font-family: Comic Sans MS, Comic Sans, cursive;
+  font-size: 40px;
+  color:yellow;
+  justify-content: center;
+  text-align: center;
+}
+
+.wrapper {
+  height: 300px;
+  width: 1680px;
+  background-color: rgb(247, 0, 255);
   display: flex;
   flex-direction: row;
-  position: center;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
 }
@@ -19,81 +30,81 @@ body {
 .shape {
   display: flex;
   flex-direction: row;
-  position: center;
   justify-content: space-evenly;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 #circle {
-  width: 100px;
-  height: 100px;
-  background: gainsboro;
+  width: 60px;
+  height: 60px;
+  background: greenyellow;
   border-radius: 50%
 }
 
 #oval {
-  width: 200px;
-  height: 100px;
-  background: gainsboro;
-  border-radius: 100px / 50px;
+  width: 100px;
+  height: 60px;
+  background: greenyellow;
+  border-radius: 50px / 30px;
 }
 
 #capsule {
-  width: 200px;
-  height: 100px;
-  background: gainsboro;
+  width: 130px;
+  height: 60px;
+  background: greenyellow;
   border-radius: 60px;
 }
   
 #square {
-  width: 100px;
-  height: 100px;
-  background: gainsboro;
+  width: 60px;
+  height: 60px;
+  background: greenyellow;
   border-radius: 20px;
 }
 
 #rectangle {
-  width: 200px;
-  height: 100px;
-  background: gainsboro;
+  width: 120px;
+  height: 60px;
+  background: greenyellow;
   border-radius: 20px;
 }
 
 #triangle {
   width: 0;
   height: 0;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-  border-bottom: 100px solid gainsboro;
+  border-left: 35px solid transparent;
+  border-right: 35px solid transparent;
+  border-bottom: 60px solid greenyellow;
 }
 
 #octagon {
-  width: 110px;
-  height: 140px;
-  background: gainsboro;
+  width: 55px;
+  height: 70px;
+  background: greenyellow;
   position: relative;
 }
 #octagon:before {
   content: "";
-  width: 50px;
+  width: 25px;
   height: 0;
   position: absolute;
   top: 0;
   left: 0;
-  border-bottom: 30px solid gainsboro;
-  border-left: 30px solid black;
-  border-right: 30px solid black;
+  border-bottom: 15px solid greenyellow;
+  border-left: 15px solid rgb(247, 0, 255);
+  border-right: 15px solid rgb(247, 0, 255);
 }
 #octagon:after {
   content: "";
-  width: 50px;
+  width: 25px;
   height: 0;
   position: absolute;
   bottom: 0;
   left: 0;
-  border-top: 30px solid gainsboro;
-  border-left: 30px solid black;
-  border-right: 30px solid black;
+  border-top: 15px solid greenyellow;
+  border-left: 15px solid rgb(247, 0, 255);
+  border-right: 15px solid rgb(247, 0, 255);
 }
 
 /* .pills {
@@ -106,81 +117,124 @@ body {
 
 .circle {
   position: absolute;
-  top: 200px;
-  left: 1000px;
+  /* top: 200px;
+  left: 1000px; */
   display: block;
-  width: 50px;
+  width: 100px;
   height: auto
 }
 
 .oval {
   position: absolute;
-  top: 200px;
-  left: 50px;
+  /* top: 200px;
+  left: 50px; */
   display: block;
-  width: 50px;
+  width: 130px;
   height: auto
 }
 
 .square {
   position: absolute;
-  top: 200px;
-  left: 500px;
+  /* top: 200px;
+  left: 500px; */
   display: block;
-  width: 50px;
+  width: 100px;
   height: auto
 }
 
 .rectangle {
   position: absolute;
-  top: 200px;
-  left: 700px;
+  /* top: 200px;
+  left: 700px; */
   display: block;
-  width: 50px;
+  width: 140px;
   height: auto
 }
 
 .capsule {
   position: absolute;
-  top: 200px;
-  left: 200px;
+  /* top: 200px;
+  left: 200px; */
   display: block;
-  width: 50px;
+  width: 140px;
   height: auto
 }
 
 .triangle {
   position: absolute;
-  top: 200px;
-  left: 300px;
+  /* top: 200px;
+  left: 300px; */
   display: block;
-  width: 50px;
+  width: 100px;
   height: auto
 }
 
 .diamond {
   position: absolute;
-  top: 200px;
-  left: 600px;
+  /* top: 200px;
+  left: 600px; */
   display: block;
-  width: 50px;
+  width: 120px;
   height: auto
 }
 
 .octagon {
   position: absolute;
-  top: 200px;
-  left: 900px;
+  /* top: 200px;
+  left: 900px; */
   display: block;
-  width: 50px;
+  width: 120px;
   height: auto
 }
 
-.polygon {
-  position: absolute;
-  top: 200px;
-  left: 800px;
-  display: block;
-  width: 50px;
-  height: auto
+button {
+  font-family: Comic Sans MS, Comic, cursive;
+  font-size: 20px;
+  background-color: blue;
+  color: white;
+  width: 100px;
+  height: 50px;
+  border-radius: 50px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 30px;
+  border: 1px solid #888;
+  width: 70%; /* Could be more or less, depending on screen size */
+  font-family: Comic Sans MS, Comic, cursive;
+  color: blue;
+}
+
+/* The Close Button */
+.close {
+  color:blue;
+  top: 10px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
