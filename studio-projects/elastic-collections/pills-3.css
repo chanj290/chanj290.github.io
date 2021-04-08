@@ -136,7 +136,8 @@ h2 {
   left: 1000px; */
   display: block;
   width: 100px;
-  height: auto
+  height: auto;
+  cursor: move;
 }
 
 .oval {
@@ -145,7 +146,8 @@ h2 {
   left: 50px; */
   display: block;
   width: 130px;
-  height: auto
+  height: auto;
+  cursor: move;
 }
 
 .square {
@@ -154,7 +156,8 @@ h2 {
   left: 500px; */
   display: block;
   width: 100px;
-  height: auto
+  height: auto;
+  cursor: move;
 }
 
 .rectangle {
@@ -163,7 +166,8 @@ h2 {
   left: 700px; */
   display: block;
   width: 140px;
-  height: auto
+  height: auto;
+  cursor: move;
 }
 
 .capsule {
@@ -172,7 +176,8 @@ h2 {
   left: 200px; */
   display: block;
   width: 140px;
-  height: auto
+  height: auto;
+  cursor: move;
 }
 
 .triangle {
@@ -181,7 +186,8 @@ h2 {
   left: 300px; */
   display: block;
   width: 100px;
-  height: auto
+  height: auto;
+  cursor: move;
 }
 
 .diamond {
@@ -190,7 +196,8 @@ h2 {
   left: 600px; */
   display: block;
   width: 120px;
-  height: auto
+  height: auto;
+  cursor: move;
 }
 
 .octagon {
@@ -199,7 +206,8 @@ h2 {
   left: 900px; */
   display: block;
   width: 120px;
-  height: auto
+  height: auto;
+  cursor: move;
 }
 
 button {

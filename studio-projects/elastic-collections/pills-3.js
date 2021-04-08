@@ -59,10 +59,43 @@ function setTable(allItems) {
     let itemImage = document.createElement('img');
     itemImage.src = imageUrl;
     itemImage.classList.add(item.fields.shape);
-    container.appendChild(itemImage);
+    // since were in the for each loop here, it will call getRandomPlace for each image, over and over
+    let randomPointOnPage = getRandomPlace();
+    // the function returns an array [randomHorizontal, randomVertical], so lets console log the first and the second item in the array
+    console.log(randomPointOnPage[0],randomPointOnPage[1]);
+    // the add a position to each image and a left and top value with the randomHorizontal=[0] and the randomVertical= [1]
+    itemImage.style.position = "fixed";
+    itemImage.style.left = `${randomPointOnPage[0]}px`;
+    itemImage.style.top = `${randomPointOnPage[1]}px`;
 
+    itemImage.addEventListener('dragenter', dragItemFunction);
+
+    container.appendChild(itemImage);
   })
 }
+
+// FUNCTION: randomize position
+function getRandomPlace() {
+	var x = window.innerWidth;
+	var y = window.innerHeight;
+	var randomHorizontal = Math.floor(Math.random()*x);
+	var randomVertical = Math.floor(Math.random()*y);
+	return [randomHorizontal, randomVertical];
+}
+
+// FUNCTION: draggable img
+
+function dragItemFunction() {
+  console.log("hello world")
+}
+
+
+
+
+
+// --------- //
+
+// MODULE: about button
 
 // Get the modal
 var modal = document.getElementById("myModal");
@@ -90,21 +123,8 @@ window.onclick = function(event) {
   }
 }
 
-// function getRandomPosition(element) {
-// 	var x = document.body.offsetHeight-element.clientHeight;
-// 	var y = document.body.offsetWidth-element.clientWidth;
-// 	var randomX = Math.floor(Math.random()*x);
-// 	var randomY = Math.floor(Math.random()*y);
-// 	return [randomX,randomY];
-// }
-// window.onload = function() {
-// 	var img = document.createElement('img');
-// 	img.setAttribute("style", "position:absolute;");
-// 	img.setAttribute("src", imageUrl);
-// 	document.body.appendChild(img);
-// 	var xy = getRandomPosition(img);
-// 	img.style.top = xy[0] + 'px';
-// 	img.style.left = xy[1] + 'px';
-// }
+// --------- //
+
+
 
 
