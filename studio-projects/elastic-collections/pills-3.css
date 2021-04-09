@@ -35,6 +35,12 @@ h2 {
   align-items: center;
 }
 
+.container {
+  width: 1600px;
+  height: 800px;
+  position: relative;
+}
+
 .shape {
   display: flex;
   flex-direction: row;

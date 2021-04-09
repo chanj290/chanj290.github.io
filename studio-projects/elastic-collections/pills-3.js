@@ -64,10 +64,11 @@ function setTable(allItems) {
     // the function returns an array [randomHorizontal, randomVertical], so lets console log the first and the second item in the array
     console.log(randomPointOnPage[0],randomPointOnPage[1]);
     // the add a position to each image and a left and top value with the randomHorizontal=[0] and the randomVertical= [1]
-    itemImage.style.position = "fixed";
+    itemImage.style.position = "absolute";
     itemImage.style.left = `${randomPointOnPage[0]}px`;
     itemImage.style.top = `${randomPointOnPage[1]}px`;
 
+    // drag
     itemImage.addEventListener('dragenter', dragItemFunction);
 
     container.appendChild(itemImage);
@@ -76,8 +77,10 @@ function setTable(allItems) {
 
 // FUNCTION: randomize position
 function getRandomPlace() {
-	var x = window.innerWidth;
-	var y = window.innerHeight;
+  let container = document.querySelector(".container");
+	var x = container.clientWidth;
+	var y = container.clientHeight;
+  console.log(x, y);
 	var randomHorizontal = Math.floor(Math.random()*x);
 	var randomVertical = Math.floor(Math.random()*y);
 	return [randomHorizontal, randomVertical];
@@ -86,12 +89,20 @@ function getRandomPlace() {
 // FUNCTION: draggable img
 
 function dragItemFunction() {
-  console.log("hello world")
+  console.log(this)
+  this.onmousedown = dragMouseDown
 }
 
-
-
-
+function dragMouseDown(e) {
+  e = e || window.event;
+  e.preventDefault();
+  // get the mouse cursor position at startup:
+  pos3 = e.clientX;
+  pos4 = e.clientY;
+  document.onmouseup = closeDragElement;
+  // call a function whenever the cursor moves:
+  document.onmousemove = elementDrag;
+}
 
 // --------- //
 
