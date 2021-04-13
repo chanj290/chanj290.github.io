@@ -50,15 +50,14 @@ base('my-dinner-table').select({}).eachPage(function page(tableItems, fetchNextP
 // -------------- //
 
 // FUNCTION: Displaying all the items onto the website.
-
-function setTable(allItems) {
   // 1) create a div
   // 2) add a class name of container to the div
   // 3) append the items to the div
-  let container = document.createElement("div");
-  container.classList.add("container");
+let container = document.createElement("div");
+container.classList.add("container");
   document.body.appendChild(container);
 
+function setTable(allItems) {
   // run a forEach loop on your array, with each item
   // then make a new HTML element and position it somewhere on the page 
   allItems.forEach(function(item) {
@@ -78,7 +77,7 @@ function setTable(allItems) {
     itemImage.classList.add(item.fields.class_name);
     container.appendChild(itemImage);
 
-    if (item.fields.type === "utensils") {
+    if (item.fields.kind_of_item === "utensil") {
       allUtensils.push(item);
     }
   })
@@ -95,4 +94,6 @@ function setTable(allItems) {
       utensils.style.display = "block";
       container.appendChild(utensils)
     })
+    console.log(allUtensils)
     }
+ 

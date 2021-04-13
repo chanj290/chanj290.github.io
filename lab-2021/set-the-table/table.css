@@ -1,66 +1,80 @@
 body {
-    background-color: bisque;
+    background-color: white;
     width: 100%;
   
-  }
-  .container {
-    position: relative;
-    margin: 20px auto;
-    height: 1200px;
-    width: 90%;
-    background-color: white;
-  }
+}
+.container {
+  position: relative;
+  margin: auto;
+  height: 1200px;
+}
+
+h1 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  position: inherit;
+  text-align: center;
+}
+
+button {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  position: inherit;
+  margin-left: 5%;
+  width: 1500px;
+  height: 50px;
+  border-radius: 50px;
+  font-size: 20px;
+}
 
   .napkin-style {
     position: absolute;
-    top: 200px;
+    top: 230px;
     left: 1000px;
     display: block;
-    width: 100px;
+    width: 200px;
     height: auto
   }
 
   .bowl-style {
     position: absolute;
-    top: 800px;
-    left: 600px;
+    top: 200px;
+    left: 700px;
     display: block;
-    width: 100px;
+    width: 250px;
     height: auto
   }
 
   .wine-glass-style {
     position: absolute;
-    top: 1000px;
-    left: 10px;
+    top: 100px;
+    left: 400px;
     display: block;
-    width: 100px;
+    width: 300px;
     height: auto
   }
 
   .plate-style {
     position: absolute;
-    top: 600px;
-    left: 200px;
+    top: 400px;
+    left: 680px;
     display: block;
-    width: 100px;
+    width: 300px;
     height: auto
   }
 
   .knife-style {
     position: absolute;
-    top: 10px;
-    left: 700px;
+    top: 450px;
+    left: 1000px;
     display: none;
-    width: 100px;
+    width: 230px;
     height: auto
   }
 
   .fork-style {
     position: absolute;
-    top: 500px;
-    left: 1200px;
+    top: 450px;
+    left: 500px;
     display: none;
-    width: 100px;
+    width: 150px;
     height: auto
   }
