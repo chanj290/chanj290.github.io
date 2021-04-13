@@ -9,7 +9,7 @@ body {
 
 h1 {
   font-family: Comic Sans MS, Comic Sans, sans-serif;
-  font-size: 80px;
+  font-size: 90px;
   color:#0059AD;
   justify-content: center;
   text-align: center;
@@ -41,50 +41,43 @@ h2 {
   position: relative;
 }
 
-/* .shape {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-} */
 
-#circle {
+.shape-circle {
   width: 65px;
   height: 65px;
   background: #E20105;
   border-radius: 50%
 }
 
-#oval {
+.shape-oval {
   width: 100px;
   height: 60px;
   background: #E20105;
   border-radius: 50px / 30px;
 }
 
-#capsule {
+.shape-capsule {
   width: 130px;
   height: 50px;
   background: #E20105;
   border-radius: 60px;
 }
   
-#square {
+.shape-square {
   width: 60px;
   height: 60px;
   background: #E20105;
   border-radius: 15px;
 }
 
-#rectangle {
+.shape-rectangle {
   width: 120px;
   height: 60px;
   background: #E20105;
   border-radius: 20px;
 }
 
-#triangle {
+.shape-triangle {
   width: 0;
   height: 0;
   border-left: 35px solid transparent;
@@ -92,13 +85,13 @@ h2 {
   border-bottom: 60px solid #E20105;
 }
 
-#octagon {
+.shape-octagon {
   width: 55px;
   height: 70px;
   background: #E20105;
   position: relative;
 }
-#octagon:before {
+.shape-octagon:before {
   content: "";
   width: 25px;
   height: 0;
@@ -109,7 +102,7 @@ h2 {
   border-left: 15px solid #FFD300;
   border-right: 15px solid #FFD300;
 }
-#octagon:after {
+.shape-octagon:after {
   content: "";
   width: 25px;
   height: 0;
@@ -121,20 +114,12 @@ h2 {
   border-right: 15px solid  #FFD300;
 }
 
-#diamond {
+.shape-diamond {
     width: 40px;
     height: 90px;
     background-color: #E20105;
     transform: skew(45deg) rotate(70deg);
 }
-
-/* .pills {
-  z-index: 9;
-  cursor: move;
-  z-index: 10;
-  background-color: #2196F3;
-  color: #fff;
-}  */
 
 .circle {
   position: absolute;
