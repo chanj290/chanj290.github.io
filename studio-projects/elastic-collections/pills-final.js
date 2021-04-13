@@ -18,6 +18,10 @@ var base = new Airtable({ apiKey: "keyTHYYWalZIz8RMc" }).base(
 // create an empty array for all of your items to go into
 let allItems = [];
 
+// array of draggable pills. each item will store the element and shape of each pill
+const PILLS = [];
+
+
 // inside the () after base put the name of YOUR spreadsheet
 base('pills').select({}).eachPage(function page(tableItems, fetchNextPage) {
   tableItems.forEach(function(item) {
@@ -38,6 +42,7 @@ base('pills').select({}).eachPage(function page(tableItems, fetchNextPage) {
 
   // now, call a new function to do stuff with your data and pass the allItems array into it
   setTable(allItems);
+  makePillsDraggable(PILLS);
 });
 
 
@@ -49,7 +54,7 @@ function setTable(allItems) {
   document.body.appendChild(container);
 
   // run a forEach loop on your array, with each item
-  // then make a new HTML element and position it somewhere on the page 
+  // then make a new HTML element and position it somewhere on the page
   allItems.forEach(function(item) {
     // store the name of the item (from your spreadsheet) into a variable
     let name = item.fields.items;
@@ -68,8 +73,24 @@ function setTable(allItems) {
     itemImage.style.left = `${randomPointOnPage[0]}px`;
     itemImage.style.top = `${randomPointOnPage[1]}px`;
 
-    // drag
-    itemImage.addEventListener('dragenter', dragItemFunction);
+    itemImage.addEventListener('dragstart', (event) => {
+      event.preventDefault();
+    });
+
+    /* push image and shape of pill to PILLS array
+     * also define some properties that will be used in the dragging function */
+    PILLS.push({
+      image: itemImage,
+      shape: item.fields.shape.join(''),
+      positions: {
+        initialX: null,
+        initialY: null,
+        currentX: null,
+        currentY: null,
+        xOffset: 0,
+        yOffset: 0
+      }
+    });
 
     container.appendChild(itemImage);
   })
@@ -87,10 +108,81 @@ function getRandomPlace() {
 }
 
 // FUNCTION: draggable img
+// pills will disappear if they are dropped close to their corresponding shape. modify this behavior in dragEnd()
+function makePillsDraggable(dragItems) {
+  const container = document.body;
 
-function dragItemFunction() {
-  console.log(this)
-  this.onmousedown = dragMouseDown
+  /* these are tolerances for dropping the pills into their shapes.
+   * higher values mean you can drop them further away and it'll still count
+   * note that this method relies on the top-left corner for positioning, so if you want
+   * to be more exact you'll have to find a way to use the width and height of the elements
+   * to grab the coordinates from the center */
+  const dropThresholds = {
+    x: 50,
+    y: 50
+  };
+
+  let active = false;
+  let activeItem;
+
+  container.addEventListener('touchstart', dragStart, false);
+  container.addEventListener('touchend', dragEnd, false);
+  container.addEventListener('touchmove', drag, false);
+  container.addEventListener('touchcancel', dragEnd, false);
+  container.addEventListener('mousedown', dragStart, false);
+  container.addEventListener('mouseup', dragEnd, false);
+  container.addEventListener('mousemove', drag, false);
+
+  function dragStart(event) {
+    for (let i = 0; i < dragItems.length; i++) {
+      if (event.target === dragItems[i].image) {
+        active = true;
+        activeItem = dragItems[i];
+        break;
+      }
+    }
+    if (event.type === 'touchstart') {
+      activeItem.positions.initialX = event.touches[0].clientX - activeItem.positions.xOffset;
+      activeItem.positions.initialY = event.touches[0].clientY - activeItem.positions.yOffset;
+    } else {
+      activeItem.positions.initialX = event.clientX - activeItem.positions.xOffset;
+      activeItem.positions.initialY = event.clientY - activeItem.positions.yOffset;
+    }
+  }
+
+  function dragEnd(event) {
+    activeItem.positions.initialX = activeItem.positions.currentX;
+    activeItem.positions.initialY = activeItem.positions.currentY;
+    active = false;
+
+    // select the shape that matches the pill being dragged and get its position
+    const shapeContainerPosition = document.querySelector(`.shape-${activeItem.shape}`).getBoundingClientRect();
+
+    // get the positions of the pill being dragged
+    const finalImagePosition = activeItem.image.getBoundingClientRect();
+
+    // this will remove the image from the document if you drop the pill inside the right shape
+    if (Math.abs(finalImagePosition.top - shapeContainerPosition.top) <= dropThresholds.x
+      && Math.abs(finalImagePosition.left - shapeContainerPosition.left) <= dropThresholds.y) {
+      activeItem.image.remove();
+    }
+  }
+
+  function drag(event) {
+    if (active) {
+      event.preventDefault();
+      if (event.type === 'touchmove') {
+        activeItem.positions.currentX = event.touches[0].clientX - activeItem.positions.initialX;
+        activeItem.positions.currentY = event.touches[0].clientY - activeItem.positions.initialY;
+      } else {
+        activeItem.positions.currentX = event.clientX - activeItem.positions.initialX;
+        activeItem.positions.currentY = event.clientY - activeItem.positions.initialY;
+      }
+      activeItem.positions.xOffset = activeItem.positions.currentX;
+      activeItem.positions.yOffset = activeItem.positions.currentY;
+      activeItem.image.style.transform = `translate(${activeItem.positions.currentX}px, ${activeItem.positions.currentY}px)`;
+    }
+  }
 }
 
 

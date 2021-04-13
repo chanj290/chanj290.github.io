@@ -41,7 +41,6 @@ h2 {
   position: relative;
 }
 
-
 .shape-circle {
   width: 65px;
   height: 65px;
@@ -62,7 +61,7 @@ h2 {
   background: #E20105;
   border-radius: 60px;
 }
-  
+
 .shape-square {
   width: 60px;
   height: 60px;
