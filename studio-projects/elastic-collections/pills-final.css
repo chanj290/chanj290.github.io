@@ -28,18 +28,18 @@ h2 {
 
 .wrapper {
   height: 200px;
-  width: 1500px;
+  width: 100%;
   background-color:#FFD300;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   margin: auto;
 }
 
 .container {
-  width: 1500px;
+  width: 100%;
   height: 250px;
   position: relative;
 }
@@ -48,7 +48,8 @@ h2 {
   width: 65px;
   height: 65px;
   background: #E20105;
-  border-radius: 50%
+  border-radius: 50%;
+  margin: 3px
 }
 
 .shape-oval {
@@ -56,6 +57,7 @@ h2 {
   height: 60px;
   background: #E20105;
   border-radius: 50px / 30px;
+  margin: 3px
 }
 
 .shape-capsule {
@@ -63,6 +65,7 @@ h2 {
   height: 50px;
   background: #E20105;
   border-radius: 60px;
+  margin: 3px
 }
   
 .shape-square {
@@ -70,6 +73,7 @@ h2 {
   height: 60px;
   background: #E20105;
   border-radius: 15px;
+  margin: 3px
 }
 
 .shape-rectangle {
@@ -77,6 +81,7 @@ h2 {
   height: 60px;
   background: #E20105;
   border-radius: 20px;
+  margin: 3px
 }
 
 .shape-triangle {
@@ -85,6 +90,7 @@ h2 {
   border-left: 35px solid transparent;
   border-right: 35px solid transparent;
   border-bottom: 60px solid #E20105;
+  margin: 3px
 }
 
 .shape-octagon {
@@ -92,6 +98,7 @@ h2 {
   height: 70px;
   background: #E20105;
   position: relative;
+  margin: 3px
 }
 
 .shape-octagon:before {
@@ -118,10 +125,14 @@ h2 {
 }
 
 .shape-diamond {
-    width: 40px;
-    height: 90px;
-    background-color: #E20105;
-    transform: skew(45deg) rotate(70deg);
+  width: 40px;
+  height: 90px;
+  background-color: #E20105;
+  transform: skew(45deg) rotate(70deg);
+  margin-top: 3px;
+  margin-bottom: 3px;
+  margin-left: 33px;
+  margin-right: 33px
 }
 
 .circle {
@@ -200,6 +211,7 @@ button {
   border-radius: 50px;
   margin-top: 10px;
   margin-left: 10px;
+  text-align: center;
 }
 
 /* The Modal (background) */
@@ -241,4 +253,31 @@ button {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+  button {
+    width: 80px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  h1 {
+    font-size: 35px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .wrapper {
+    width: 100%;
+  }
+  
+  .container {
+    width: 100%;
+  }
+
 }
