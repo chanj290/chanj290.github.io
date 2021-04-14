@@ -26,6 +26,11 @@ h2 {
 
 }
 
+a {
+  color: #0879A6;
+  text-decoration: none;
+}
+
 .wrapper {
   height: 200px;
   width: 100%;
@@ -221,10 +226,6 @@ button {
   cursor: pointer;
 }
 
-button:hover {
-  color: black;
-}
-
 button:focus {outline:0;}
 
 /* The Modal (background) */
@@ -285,7 +286,7 @@ button:focus {outline:0;}
 #alertBox {
   position:relative;
   width:500px;
-  min-height:200px;
+  min-height: 250px;
   margin-top: 300px;
   border-radius: 20px;
   border: none;
@@ -301,7 +302,7 @@ button:focus {outline:0;}
   font-size: 40px;
   background-color: white;
   color:#0059AD;
-  height:50px;
+  height:100px;
   text-align: center;
 }
 
@@ -319,6 +320,10 @@ button:focus {outline:0;}
   border-radius: 3px;
   text-decoration:none;
   border: none
+}
+
+.small {
+  font-size: 20px;
 }
 
 /* -------- */
@@ -347,8 +352,18 @@ button:focus {outline:0;}
     font-size: 16px;
   }
 
+  #alertBox p{
+    font-size: 30px;
+  }
+
+  .small {
+    font-size: 12px;
+  }
+
   #alertBox {
     width:70%;
     margin-top: 100px;
   }
+
+  
 }

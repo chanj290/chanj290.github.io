@@ -40,7 +40,8 @@ base('pills').select({}).eachPage(function page(tableItems, fetchNextPage) {
   console.log(allItems);
 
   // now, call a new function to do stuff with your data and pass the allItems array into it
-  setTable(allItems);
+  // setTable(allItems);
+  setTable(allItems.slice(0, 1))
   makePillsDraggable(PILLS);
 });
 
@@ -177,7 +178,7 @@ if (dragItems.every((item) => !document.body.contains(item.image))) {
   container.removeEventListener('mouseup', dragEnd, false);
   container.removeEventListener('mousemove', drag, false);
 
-  alert('Great Job!');
+  alert('Great Job! Take your medication now.');
 }
 }
 
@@ -199,7 +200,7 @@ if (dragItems.every((item) => !document.body.contains(item.image))) {
 
 // Success Button
 
-var thanksBtn = "Thanks";
+var okayBtn = "Okay";
 
 if(document.getElementById) {
     window.alert = function(sucessBtn) {
@@ -227,10 +228,11 @@ function createCustomAlert(sucessBtn) {
 
     btn = alertObj.appendChild(d.createElement("a"));
     btn.id = "closeBtn";
-    btn.appendChild(d.createTextNode(thanksBtn));
+    btn.appendChild(d.createTextNode(okayBtn));
     btn.href = "#";
     btn.focus();
     btn.onclick = function() { removeCustomAlert();return false; }
+    btn.onclick = function() { refreshPage();return false; }
 
     alertObj.style.display = "block";
 
@@ -240,6 +242,9 @@ function removeCustomAlert() {
     document.getElementsByTagName("body")[0].removeChild(document.getElementById("modalContainer"));
 }
 
+function refreshPage(){
+  window.location.reload();
+} 
 
 // --------- //
 
