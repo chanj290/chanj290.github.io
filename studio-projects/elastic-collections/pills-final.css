@@ -280,4 +280,7 @@ button {
     width: 70%;
   }
 
+  .modal-content {
+    font-size: 16px;
+  }
 }
