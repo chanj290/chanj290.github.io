@@ -40,8 +40,7 @@ base('pills').select({}).eachPage(function page(tableItems, fetchNextPage) {
   console.log(allItems);
 
   // now, call a new function to do stuff with your data and pass the allItems array into it
-  // NEW  setTable(allItems);
-  setTable(allItems.slice(0, 1));
+  setTable(allItems);
   makePillsDraggable(PILLS);
 });
 
@@ -169,6 +168,15 @@ function dragEnd(event) {
   
 // Sucess Button
 if (dragItems.every((item) => !document.body.contains(item.image))) {
+
+  container.removeEventListener('touchstart', dragStart, false);
+  container.removeEventListener('touchend', dragEnd, false);
+  container.removeEventListener('touchmove', drag, false);
+  container.removeEventListener('touchcancel', dragEnd, false);
+  container.removeEventListener('mousedown', dragStart, false);
+  container.removeEventListener('mouseup', dragEnd, false);
+  container.removeEventListener('mousemove', drag, false);
+
   alert('Great Job!');
 }
 }
