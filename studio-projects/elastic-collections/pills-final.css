@@ -285,7 +285,7 @@ button:focus {outline:0;}
 
 #alertBox {
   position:relative;
-  width:500px;
+  width:800px;
   min-height: 250px;
   margin-top: 300px;
   border-radius: 20px;
@@ -299,27 +299,29 @@ button:focus {outline:0;}
 
 #alertBox p {
   font-family: Comic Sans MS, Comic Sans, sans-serif;
-  font-size: 40px;
+  font-size: 30px;
   background-color: white;
   color:#0059AD;
   height:100px;
   text-align: center;
+  padding: 0 20px 20px 20px;
 }
 
 #alertBox #closeBtn {
   display:block;
   position:relative;
-  margin:5px auto;
-  padding:7px;
-  width:70px;
+  margin: 5px auto;
+  padding: 7px;
+  width: 100px;
+  height: 30px;
   font-family: Comic Sans MS, Comic Sans, sans-serif;
   font-size: 18px;
   text-align:center;
   color: white;
   background-color:#0059AD;
-  border-radius: 3px;
+  border-radius: 20px;
   text-decoration:none;
-  border: none
+  outline: none
 }
 
 .small {
@@ -353,7 +355,7 @@ button:focus {outline:0;}
   }
 
   #alertBox p{
-    font-size: 30px;
+    font-size: 20px;
   }
 
   .small {
@@ -361,9 +363,9 @@ button:focus {outline:0;}
   }
 
   #alertBox {
-    width:70%;
+    width: 85%;
+    min-height: 250px;
     margin-top: 100px;
   }
-
   
 }

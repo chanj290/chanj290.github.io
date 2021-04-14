@@ -40,8 +40,8 @@ base('pills').select({}).eachPage(function page(tableItems, fetchNextPage) {
   console.log(allItems);
 
   // now, call a new function to do stuff with your data and pass the allItems array into it
-  setTable(allItems);
-  // setTable(allItems.slice(0, 1))
+  // setTable(allItems);
+  setTable(allItems.slice(0, 1))
   makePillsDraggable(PILLS);
 });
 
@@ -178,7 +178,7 @@ if (dragItems.every((item) => !document.body.contains(item.image))) {
   container.removeEventListener('mouseup', dragEnd, false);
   container.removeEventListener('mousemove', drag, false);
 
-  alert('Great Job! Take your medication now.');
+  alert('Your most recent trial of pills were not the best match for you. Another batch of pills will be prescribed to you. How about you test them out too?');
 }
 }
 
@@ -200,7 +200,7 @@ if (dragItems.every((item) => !document.body.contains(item.image))) {
 
 // Success Button
 
-var okayBtn = "Okay";
+var okayBtn = "Try again";
 
 if(document.getElementById) {
     window.alert = function(sucessBtn) {
