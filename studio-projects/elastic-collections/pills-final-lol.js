@@ -41,7 +41,7 @@ base('pills').select({}).eachPage(function page(tableItems, fetchNextPage) {
 
   // now, call a new function to do stuff with your data and pass the allItems array into it
   // NEW  setTable(allItems);
-  setTable(allItems.slice(0, 1));
+  setTable(allItems.slice(0, 5));
   makePillsDraggable(PILLS);
 });
 
@@ -162,11 +162,12 @@ function dragEnd(event) {
   && Math.abs(finalImagePosition.left - shapeContainerPosition.left) <= dropThresholds.y) {
   activeItem.image.remove();
 }
-// Sucess Button
+// NEW
 if (dragItems.every((item) => !document.body.contains(item.image))) {
-  alert('Great Job!');
+  alert('you win');
 }
 }
+
 
   function drag(event) {
   if (active) {
@@ -183,50 +184,6 @@ if (dragItems.every((item) => !document.body.contains(item.image))) {
     activeItem.image.style.transform = `translate(${activeItem.positions.currentX}px, ${activeItem.positions.currentY}px)`;
     }
   }
-
-// Success Button
-
-var thanksBtn = "Thanks";
-
-if(document.getElementById) {
-    window.alert = function(sucessBtn) {
-        createCustomAlert(sucessBtn);
-    }
-}
-
-function createCustomAlert(sucessBtn) {
-    d = document;
-
-    if(d.getElementById("modalContainer")) return;
-
-    mObj = d.getElementsByTagName("body")[0].appendChild(d.createElement("div"));
-    mObj.id = "modalContainer";
-    mObj.style.height = d.documentElement.scrollHeight + "px";
-
-    alertObj = mObj.appendChild(d.createElement("div"));
-    alertObj.id = "alertBox";
-    if(d.all && !window.opera) alertObj.style.top = document.documentElement.scrollTop + "px";
-    alertObj.style.left = (d.documentElement.scrollWidth - alertObj.offsetWidth)/2 + "px";
-    alertObj.style.visiblity="visible";
-
-    msg = alertObj.appendChild(d.createElement("p"));
-    msg.innerHTML = sucessBtn;
-
-    btn = alertObj.appendChild(d.createElement("a"));
-    btn.id = "closeBtn";
-    btn.appendChild(d.createTextNode(thanksBtn));
-    btn.href = "#";
-    btn.focus();
-    btn.onclick = function() { removeCustomAlert();return false; }
-
-    alertObj.style.display = "block";
-
-}
-
-function removeCustomAlert() {
-    document.getElementsByTagName("body")[0].removeChild(document.getElementById("modalContainer"));
-}
-
 
 // --------- //
 
