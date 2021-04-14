@@ -9,22 +9,25 @@ body {
 
 h1 {
   font-family: Comic Sans MS, Comic Sans, sans-serif;
-  font-size: 90px;
+  font-size: 80px;
   color:#0059AD;
   justify-content: center;
   text-align: center;
+  margin: 0px
 }
 
 h2 {
   font-family: Comic Sans MS, Comic Sans, sans-serif;
-  font-size: 50px;
+  font-size: 40px;
   color:#0879A6;
   justify-content: center;
   text-align: center;
+  margin: 0px;
+
 }
 
 .wrapper {
-  height: 300px;
+  height: 200px;
   width: 1500px;
   background-color:#FFD300;
   display: flex;
@@ -37,10 +40,9 @@ h2 {
 
 .container {
   width: 1500px;
-  height: 500px;
+  height: 250px;
   position: relative;
 }
-
 
 .shape-circle {
   width: 65px;
@@ -91,6 +93,7 @@ h2 {
   background: #E20105;
   position: relative;
 }
+
 .shape-octagon:before {
   content: "";
   width: 25px;
@@ -123,8 +126,6 @@ h2 {
 
 .circle {
   position: absolute;
-  /* top: 200px;
-  left: 1000px; */
   display: block;
   width: 100px;
   height: auto;
@@ -143,8 +144,6 @@ h2 {
 
 .square {
   position: absolute;
-  /* top: 200px;
-  left: 500px; */
   display: block;
   width: 100px;
   height: auto;
@@ -153,8 +152,6 @@ h2 {
 
 .rectangle {
   position: absolute;
-  /* top: 200px;
-  left: 700px; */
   display: block;
   width: 140px;
   height: auto;
@@ -163,8 +160,6 @@ h2 {
 
 .capsule {
   position: absolute;
-  /* top: 200px;
-  left: 200px; */
   display: block;
   width: 140px;
   height: auto;
@@ -173,8 +168,6 @@ h2 {
 
 .triangle {
   position: absolute;
-  /* top: 200px;
-  left: 300px; */
   display: block;
   width: 100px;
   height: auto;
@@ -183,8 +176,6 @@ h2 {
 
 .diamond {
   position: absolute;
-  /* top: 200px;
-  left: 600px; */
   display: block;
   width: 120px;
   height: auto;
@@ -193,8 +184,6 @@ h2 {
 
 .octagon {
   position: absolute;
-  /* top: 200px;
-  left: 900px; */
   display: block;
   width: 120px;
   height: auto;
