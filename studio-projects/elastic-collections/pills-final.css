@@ -256,7 +256,7 @@ button {
 }
 
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
 
   button {
     width: 80px;
@@ -277,7 +277,7 @@ button {
   }
   
   .container {
-    width: 100%;
+    width: 70%;
   }
 
 }
