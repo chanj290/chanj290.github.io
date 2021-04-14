@@ -137,31 +137,36 @@ function dragStart(event) {
       break;
     }
   }
-  if (event.type === 'touchstart') {
-    activeItem.positions.initialX = event.touches[0].clientX - activeItem.positions.xOffset;
-    activeItem.positions.initialY = event.touches[0].clientY - activeItem.positions.yOffset;
-  } else {
-    activeItem.positions.initialX = event.clientX - activeItem.positions.xOffset;
-    activeItem.positions.initialY = event.clientY - activeItem.positions.yOffset;
+  if (activeItem) {
+	  if (event.type === 'touchstart') {
+	    activeItem.positions.initialX = event.touches[0].clientX - activeItem.positions.xOffset;
+	    activeItem.positions.initialY = event.touches[0].clientY - activeItem.positions.yOffset;
+	  } else {
+	    activeItem.positions.initialX = event.clientX - activeItem.positions.xOffset;
+	    activeItem.positions.initialY = event.clientY - activeItem.positions.yOffset;
+	  }
   }
 }
 
 function dragEnd(event) {
-  activeItem.positions.initialX = activeItem.positions.currentX;
-  activeItem.positions.initialY = activeItem.positions.currentY;
-  active = false;
+  if (activeItem) {
+		activeItem.positions.initialX = activeItem.positions.currentX;
+		activeItem.positions.initialY = activeItem.positions.currentY;
+		active = false;
 
-  // select the shape that matches the pill being dragged and get its position
-  const shapeContainerPosition = document.querySelector(`.shape-${activeItem.shape}`).getBoundingClientRect();
+		// select the shape that matches the pill being dragged and get its position
+		const shapeContainerPosition = document.querySelector(`.shape-${activeItem.shape}`).getBoundingClientRect();
 
-  // get positions of the pill being dragged
-  const finalImagePosition = activeItem.image.getBoundingClientRect();
+		// get positions of the pill being dragged
+		const finalImagePosition = activeItem.image.getBoundingClientRect();
 
-  // this will remove the image from the document if you drop the pill inside the right shape
-  if (Math.abs(finalImagePosition.top - shapeContainerPosition.top) <= dropThresholds.x
-  && Math.abs(finalImagePosition.left - shapeContainerPosition.left) <= dropThresholds.y) {
-  activeItem.image.remove();
-}
+		// this will remove the image from the document if you drop the pill inside the right shape
+		if (Math.abs(finalImagePosition.top - shapeContainerPosition.top) <= dropThresholds.x
+		&& Math.abs(finalImagePosition.left - shapeContainerPosition.left) <= dropThresholds.y) {
+			activeItem.image.remove();
+		}
+	}
+  
 // Sucess Button
 if (dragItems.every((item) => !document.body.contains(item.image))) {
   alert('Great Job!');
