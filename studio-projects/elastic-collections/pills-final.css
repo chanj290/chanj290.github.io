@@ -31,6 +31,10 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  color:#0059AD;
+}
+
 .wrapper {
   height: 200px;
   width: 100%;
@@ -211,7 +215,7 @@ a {
 /* About Button  */
 button {
   font-family: Comic Sans MS, Comic, sans-serif;
-  font-size: 30px;
+  font-size: 20px;
   background-color: #069903;
   color: white;
   width: 130px;
@@ -335,7 +339,7 @@ button:focus {outline:0;}
   button {
     width: 80px;
     height: 40px;
-    font-size: 18px;
+    font-size: 14px;
   }
 
   h1 {
