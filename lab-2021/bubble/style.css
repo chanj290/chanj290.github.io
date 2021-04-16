@@ -1,0 +1,21 @@
+body {
+    background:lightblue;
+}
+
+h1 {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.bubble {
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    background:lightskyblue;
+    border: 2px solid royalblue;
+    border-radius: 50%;
+    z-index: 2;
+}
