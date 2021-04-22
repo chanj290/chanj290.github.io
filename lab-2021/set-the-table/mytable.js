@@ -1,99 +1,104 @@
-// FOLLOW THE COMMENTS STEP BY STEP
-// log in to you your Airtable account
-// make sure you have a base set up with at least one table with data inside it
-// go to Account settings
-// click the generate API key button
-// copy and paste it into line 13 below
-// then go to this link https://airtable.com/api?utm_source=google&utm_medium=cpc&utm_extra5=kwd-826617918193&utm_extra2=936407691&utm_extra10=110555501161&creative=465926015426&device=c&cx=us&targetid=kwd-826617918193&campaignid=936407691&adgroupid=110555501161&utm_campaign=brand_creator&utm_content=bofu_freetrial&gclid=Cj0KCQjwmIuDBhDXARIsAFITC_5ScBkfOcfy68SuLtNsXhLoTp8JoYwFlBuOK6yDpmKnA_eCAXZ3kKsaAptkEALw_wcB
-// select your base
-// copy and paste the base ID into line 14 below
-
 // LINKING AIRTABLE
+
+// make Airtable a variable 
 var Airtable = require("airtable");
+// print the variable, Airtable
 console.log(Airtable);
+// make the base variable your API key ID and base ID to connect your Airtable to the Javascript
 var base = new Airtable({ apiKey: "keyTHYYWalZIz8RMc" }).base(
   "appsjPqy1nOgwFEuD"
 );
 
 // ---------------- //
 
-
-// empty array for all items in my airtable
+// make an empty array for all items in my airtable
 let allItems = [];
 
-// empty array for all utensils in my airtable
+// make an empty array for all the utensils in my airtable
 let allUtensils = [];
 
 
-// inside the () after base put the name of YOUR spreadsheet
+// connect my airtable spreadsheet that is called 'my-dinner-table' and add the functions.
 base('my-dinner-table').select({}).eachPage(function page(tableItems, fetchNextPage) {
+  // for each table item, add the function and pass the item through the function
   tableItems.forEach(function(item) {
-    // push each item received into the allItems array on line 16
+    // push each item received into the allItems array
     allItems.push(item);
   });
 
-
-  // if there is another page of items, get those too
+  // this fetches all the items for any potential pages
   fetchNextPage();
-
+// this function says to run and return an error if there is an error with receiving all the items
 }, function done(err) {
   if (err) { console.error(err); return; }
 
-  // all items received, no errors!!
-  // console log the allItems array, you should see all of your data in there now.
+  // console log the allItems array to see if all the data shows up on the page
   console.log(allItems);
 
-  // now, call a new function to do stuff with your data and pass the allItems array into it
+  // a new function that will pass all of your data through (allItems array)
   setTable(allItems);
 });
 
 // -------------- //
 
 // FUNCTION: Displaying all the items onto the website.
-  // 1) create a div
-  // 2) add a class name of container to the div
-  // 3) append the items to the div
+
+// create a div container
 let container = document.createElement("div");
+// add a class name of container to the div
 container.classList.add("container");
+  // append the items to the div
   document.body.appendChild(container);
 
+// FUNCTION: Adding classes to all the items.
+
 function setTable(allItems) {
-  // run a forEach loop on your array, with each item
-  // then make a new HTML element and position it somewhere on the page 
+  // use a forEach loop on the array with each item
   allItems.forEach(function(item) {
-    // store the name of the item (from your spreadsheet) into a variable
+    // make the name of each item a variable
     let name = item.fields.items;
-    // store the image for the item into a variable
+    // source the image for the items into a variable
     let imageUrl = item.fields.images[0].url;
 
-
-    // let itemImage = document.createElement('img');
-    // itemImage.src = imageUrl;
-    // itemImage.classList.add(item.fields.kind_of_item);
-    // container.appendChild(itemImage);
-
+    // create an image element through Javascript
     let itemImage = document.createElement('img');
+    // source the image from the imageUrl
     itemImage.src = imageUrl;
+    // add a class name onto each image from the class_name column from the airtable spreadsheet
     itemImage.classList.add(item.fields.class_name);
+    // append this to the container
     container.appendChild(itemImage);
-
+    // if the items are under the category of "utensil", then push the items through allUtensils
     if (item.fields.kind_of_item === "utensil") {
       allUtensils.push(item);
     }
   })
 }
 
-  let placeUtensilsBtn = document.getElementById("place-utensils");
-  placeUtensilsBtn.addEventListener('click', showAllUtensils)
+// ----------- //
 
+// FUNCTION: make the place utensils button work so that they appear
+
+  // create variable placeUtensilBtn and retrieve from the document the place-utensils ID
+  let placeUtensilsBtn = document.getElementById("place-utensils");
+  // add a click event listener to the placeUtensilsBtn so that it will run the function showAllUtensils
+  placeUtensilsBtn.addEventListener('click', showAllUtensils)
+  // create the function
   function showAllUtensils() {
+    // for each utensil item, pass it into the function
     allUtensils.forEach(function(utensilsItem) {
+      // make a utensils variable and create an image element to the html document
       let utensils = document.createElement('img');
+      // source the images from the airtable spreadsheet
       utensils.src = utensilsItem.fields.images[0].url;
+      // add a class list to the utensils from the class_name column from airtable
       utensils.classList.add(utensilsItem.fields.class_name);
+      // style the utensils elements so that display block
       utensils.style.display = "block";
+      // append utensils to the container of the website
       container.appendChild(utensils)
     })
+    // console log and run allUtensils
     console.log(allUtensils)
     }
  
