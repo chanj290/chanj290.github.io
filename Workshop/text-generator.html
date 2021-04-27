@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sentence Generator</title>
+        <style>
+            body {
+                font-size: 100px;
+                color: white;
+                text-align: center;
+                background: rgb(31, 31, 31);
+            }
+
+            .button-container {
+                position: absolute;
+                bottom: 200px;
+                left: 200px;
+                background-color:rgb(14, 14, 14);
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                font-size: 24px;
+                font-family: serif;
+                margin: 4px 2px;
+                cursor: pointer;
+            }
+
+            .list-one {
+                color:cornflowerblue
+            }
+
+            .list-two {
+                color:lightpink
+            }
+
+            .list-three {
+                color: palegreen
+            }
+
+            .list-four {
+                color:plum
+            }
+
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                // fill in the blank 1
+                var adjective = [
+                    "bitter",
+                    "tangy",
+                    "pickled",
+                    "cuddly",
+                    "bumpy",
+                    "sticky",
+                    "sweaty",
+                    "slimy",
+                    "flaky",
+                    "crusty",
+                    "hoarse",
+                    "moaning",
+                    "chubby",
+                    "scrawny",
+                    "spunky",
+                    "kind-hearted",
+                    "sleepy",
+                    "harsh",
+                ];
+
+                // fill in the blank 2
+                var noun = [
+                    "audience viewer",
+                    "army general",
+                    "mother-in-law",
+                    "bodyguard",
+                    "gang member",
+                    "worm",
+                    "frog",
+                    "sloth",
+                    "pastor",
+                    "librarian",
+                    "president",
+                    "nerd",
+                    "weatherman",
+                    "marriage counselor",
+                    "junkie",
+                    "professor",
+                    "barista",
+                    "judge"
+                ];
+
+                // fill in the blank 3
+                var adverb = [
+                    "uncomfortably",
+                    "violently",
+                    "annoyingly",
+                    "disgustingly",
+                    "gracefully",
+                    "musically",
+                    "loudly",
+                    "softly",
+                    "persuasively",
+                    "amusingly",
+                    "firmly",
+                    "wearily",
+                    "briskly",
+                    "beautifully",
+                    "abruptly",
+                    "randomly",
+                    "expertly",
+                ];
+               
+                // fill in the blank 4
+                var verb = [
+                    "sobbed",
+                    "frolicked",
+                    "itched",
+                    "waved",
+                    "sneezed",
+                    "kicked",
+                    "swayed",
+                    "slept",
+                    "joked",
+                    "stared",
+                    "lectured",
+                    "sang",
+                    "wiggled",
+                    "slurped",
+                    "burped",
+                    "growled",
+                    "crawled",
+                ];
+
+                function select_random(x){
+                    y = x[Math.floor(Math.random()*x.length)];
+                    return y;
+                }
+
+                function generate(){
+
+                    // selecting a random item from each list
+                    var selected_one = select_random(adjective);
+                    var selected_two = select_random(noun);
+                    var selected_three = select_random(adverb);
+                    var selected_four = select_random(verb);
+
+                    // make selected random word visible
+                    $('.list-one').html(selected_one);
+                    $('.list-two').html(selected_two);
+                    $('.list-three').html(selected_three);
+                    $('.list-four').html(selected_four);
+                }
+
+                $('button').click(function(){
+                    generate();
+                });
+
+                generate();
+
+            });
+
+        </script>
+    </head>
+    <body>
+        <p>The <span class="list-one"></span> <span class="list-two"></span> <span class="list-three"></span> <span class="list-four"></span>.</p>
+
+        <div>
+            <button class="button-container">Generate!</button>
+        </div>
+
+    </body>
+</html>
