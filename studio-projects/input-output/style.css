@@ -57,8 +57,18 @@ h2 {
     cursor: default;
     width: 250px;
     position: fixed;
-    top: 10px;
+    top: 11px;
     left: 30px;
+}
+
+a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #9ab1bd;
 }
 
 h3 {
@@ -82,12 +92,11 @@ h3 {
 
 p {
     font-family: 'bookmaniaregular';
-    font-size: 36px;
+    font-size: 24px;
     cursor: default;
     display: inline-block;
     padding-left: 10px;
 }
-
 
 .input-container {
     text-decoration: none;
@@ -95,10 +104,11 @@ p {
     height: 50px;
     width: 100px;
     text-align: center;
-    font-family: 'bookmaniasemibold', 'Times New Roman', Times, serif;
+    font-family: 'bookmaniaregular', 'Times New Roman', Times, serif;
     font-size: 24px;
     justify-content: center;
-    background-color: #d6d6d6;
+    background-color: #9ab1bd;
+    color: #FFFFFF;
     display: inline-block;
 }
 
@@ -136,6 +146,7 @@ button:focus {
         font-size: 65px;
         line-height: 120%;
         margin: 200px auto 15px auto;
+        width: 90%;
     }
 
     .input-container {
