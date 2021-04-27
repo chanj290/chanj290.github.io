@@ -40,8 +40,8 @@ base('pills').select({}).eachPage(function page(tableItems, fetchNextPage) {
   console.log(allItems);
 
   // now, call a new function to do stuff with your data and pass the allItems array into it
-  setTable(allItems);
-  // setTable(allItems.slice(0, 1))
+  // setTable(allItems);
+  setTable(allItems.slice(0, 10))
   makePillsDraggable(PILLS);
 });
 
