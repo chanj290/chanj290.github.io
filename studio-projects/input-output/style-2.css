@@ -41,13 +41,9 @@ body {
 
 h1 {
     font-family: 'bookmaniasemibold', 'Times New Roman', Times, serif;
-    font-size: 100px;
-    line-height: 93.5%;
+    font-size: 50px;
+    line-height: 100%;
     cursor: default;
-    text-align: center;
-    width: 800px;
-    display: flex;
-    margin: 200px auto 50px auto;
 }
 
 h2 {
@@ -68,7 +64,7 @@ a {
 
 a:hover {
     text-decoration: none;
-    color: #9ab1bd;
+    color: #4d636e;
 }
 
 h3 {
@@ -101,48 +97,7 @@ p {
     cursor: default;
 }
 
-.input-container {
-    text-decoration: none;
-    border: none;
-    height: 50px;
-    width: 100px;
-    text-align: center;
-    font-family: 'bookmaniaregular', 'Times New Roman', Times, serif;
-    font-size: 24px;
-    justify-content: center;
-    background-color: #9ab1bd;
-    color: #FFFFFF;
-    display: inline-block;
-}
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-}
-
-input::-webkit-inner-spin-button:focus {
-    outline: 0;
-}
-
-.button-container {
-    text-decoration: none;
-    border: none;
-    text-align: center;
-    font-family: 'bookmaniasemibold_italic', 'Times New Roman', Times, serif;
-    font-size: 24px;
-    padding: 10px;
-    background-color: #FFFFFF;
-    width: 160px;
-    height: 50px;
-    cursor: pointer;
-    border-radius: 30px;
-    display: block;
-    margin: 50px auto 50px auto;
-}
-
-button:focus {
-    outline:0;
-}
 
 @media screen and (max-width: 800px) {
     h1 {
@@ -160,4 +115,53 @@ button:focus {
         float: center
     }
 
+}
+
+/* Generator */
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 1 1;
+    align-items: stretch;
+    margin: 200px 15px 15px 15px;
+}
+
+.days-column, .movies-column, .games-column, .exercises-column{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    padding: 5px;
+}
+
+.list-one, .list-two, .list-three, .list-four {
+    font-family: 'bookmaniaregular';
+    font-size: 24px;
+    color: #2b2b2b;
+    cursor: default;
+}
+
+@media screen and (max-width: 800px) {
+
+    h1 {
+        font-size: 18px;
+        color: #4d636e;
+    }
+
+    .container {
+        margin: 15px 5px 15px 5px;
+    }
+
+    .list-one, .list-two, .list-three, .list-four {
+        font-size: 14px;
+        line-height: 95%;
+    }
+
+}
+
+@media screen and (min-width: 1300px) {
+
+    h1 {
+        font-size: 80px;
+    }
 }

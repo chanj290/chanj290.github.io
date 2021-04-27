@@ -102,7 +102,7 @@ $(document).ready(function() {
     ];
 
     // fill in the blank 3
-    var workout = [
+    var exercise = [
         "15 crunches",
         "20 crunches",
         "30 crunches",
@@ -142,6 +142,9 @@ $(document).ready(function() {
         "50 burpees",
     ];
    
+    var day = [
+        "1",
+    ]
 
     function select_random(x){
         y = x[Math.floor(Math.random()*x.length)];
@@ -153,12 +156,14 @@ $(document).ready(function() {
         // selecting a random item from each list
         var selected_one = select_random(movie);
         var selected_two = select_random(game);
-        var selected_three = select_random(workout);
+        var selected_three = select_random(exercise);
+        var selected_four = select_random(day);
 
         // make selected random word visible
         $('.list-one').html(selected_one);
         $('.list-two').html(selected_two);
         $('.list-three').html(selected_three);
+        $('.list-four').html(selected_four);
     }
 
     $('button').click(function(){
