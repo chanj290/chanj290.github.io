@@ -7,17 +7,9 @@ html {
 }
 
 a:link {
-	color:#ffa0ae;
-}
-
-a:visited {
-	color:#ff8851;
+	color:#131313;
 }
 
 a:hover {
-	color:#ff8c8c;
-}
-
-a:active {
-	color:bisque;
+	color:#dfdfdf;
 }
