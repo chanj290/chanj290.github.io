@@ -13,3 +13,11 @@ a:link {
 a:hover {
 	color:#dfdfdf;
 }
+
+a:visited {
+	color: #131313;
+}
+
+a:active {
+	color: #131313;
+}
