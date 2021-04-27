@@ -1,0 +1,149 @@
+@font-face {
+    font-family: 'bookmaniaregular';
+    src: url('fonts/bookmania_regular-webfont.woff2') format('woff2'),
+         url('fonts/bookmania_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'bookmaniasemibold_italic';
+    src: url('fonts/bookmania_semibold_italic-webfont.woff2') format('woff2'),
+         url('fonts/bookmania_semibold_italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'bookmaniasemibold';
+    src: url('fonts/bookmania_semibold-webfont.woff2') format('woff2'),
+         url('fonts/bookmania_semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'bookmaniaitalic';
+    src: url('fonts/bookmania_italic-webfont.woff2') format('woff2'),
+         url('fonts/bookmania_italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+    background-color: #B6CDD8;
+    color: #FFFFFF;
+}
+
+h1 {
+    font-family: 'bookmaniasemibold', 'Times New Roman', Times, serif;
+    font-size: 100px;
+    line-height: 93.5%;
+    cursor: default;
+    text-align: center;
+    width: 800px;
+    display: flex;
+    margin: 200px auto 50px auto;
+}
+
+h2 {
+    font-family: 'bookmaniasemibold_italic', 'Times New Roman', Times, serif;
+    font-size: 36px;
+    line-height: 100%;
+    cursor: default;
+    width: 250px;
+    position: fixed;
+    top: 10px;
+    left: 30px;
+}
+
+h3 {
+    font-family: 'bookmaniasemibold', 'Times New Roman', Times, serif;
+    font-size: 18px;
+    line-height: 100%;
+    text-align: right;
+    cursor: default;
+    width: 115px;
+    position: fixed;
+    top: 20px;
+    right: 30px;
+}
+
+.input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin: 50px auto 50px auto; */
+}
+
+p {
+    font-family: 'bookmaniaregular';
+    font-size: 36px;
+    cursor: default;
+    display: inline-block;
+    padding-left: 10px;
+}
+
+
+.input-container {
+    text-decoration: none;
+    border: none;
+    height: 50px;
+    width: 100px;
+    text-align: center;
+    font-family: 'bookmaniasemibold', 'Times New Roman', Times, serif;
+    font-size: 24px;
+    justify-content: center;
+    background-color: #d6d6d6;
+    display: inline-block;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input::-webkit-inner-spin-button:focus {
+    outline: 0;
+}
+
+.button-container {
+    text-decoration: none;
+    border: none;
+    text-align: center;
+    font-family: 'bookmaniasemibold_italic', 'Times New Roman', Times, serif;
+    font-size: 24px;
+    padding: 10px;
+    background-color: #FFFFFF;
+    width: 160px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 30px;
+    display: block;
+    margin: 50px auto 50px auto;
+}
+
+button:focus {
+    outline:0;
+}
+
+@media screen and (max-width: 800px) {
+    h1 {
+        font-size: 65px;
+        line-height: 120%;
+        margin: 200px auto 15px auto;
+    }
+
+    .input-container {
+        float: center
+    }
+
+    .button-container {
+        float: center
+    }
+
+}
