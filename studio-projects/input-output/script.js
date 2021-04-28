@@ -166,10 +166,26 @@ $(document).ready(function() {
         $('.list-four').html(selected_four);
     }
 
-    $('button').click(function(){
+    $('#go').click(function(){
         generate();
     });
 
     generate();
 
 });
+
+var doc = new jsPDF();
+var specialElementHandlers = {
+    '#editor': function (element, renderer) {
+        return true;
+    }
+};
+
+$('#download').click(function () {
+    doc.fromHTML($('#content').html(), 15, 15, {
+        'width': 170,
+            'elementHandlers': specialElementHandlers
+    });
+    doc.save('quarantine-activities.pdf');
+});
+

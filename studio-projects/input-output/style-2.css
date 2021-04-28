@@ -57,9 +57,12 @@ h2 {
     left: 30px;
 }
 
+.logo {
+    color: #FFFFFF;
+}
+
 a {
     text-decoration: none;
-    color: #FFFFFF;
 }
 
 a:hover {
@@ -68,12 +71,12 @@ a:hover {
 }
 
 h3 {
-    font-family: 'bookmaniasemibold', 'Times New Roman', Times, serif;
-    font-size: 18px;
+    font-family: 'bookmaniasemibold_italic', 'Times New Roman', Times, serif;
+    font-size: 50px;
     line-height: 100%;
-    text-align: right;
     cursor: default;
-    width: 115px;
+    width: 600px;
+    text-align: right;
     position: fixed;
     top: 20px;
     right: 30px;
@@ -100,20 +103,6 @@ p {
 
 
 @media screen and (max-width: 800px) {
-    h1 {
-        font-size: 65px;
-        line-height: 120%;
-        margin: 200px auto 15px auto;
-        width: 90%;
-    }
-
-    .input-container {
-        float: center
-    }
-
-    .button-container {
-        float: center
-    }
 
 }
 
@@ -141,15 +130,45 @@ p {
     cursor: default;
 }
 
+.download-btn {
+    background-color: #9ab1bd;
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-size: 24px;
+    font-family: 'bookmaniasemibold_italic', 'Times New Roman', Times, serif;
+    border-radius: 30px;
+    display: block;
+    margin: 50px auto 50px auto;
+  }
+
+  .download-btn:hover {
+    background-color: #4d636e;
+  }
+
 @media screen and (max-width: 800px) {
 
     h1 {
         font-size: 18px;
         color: #4d636e;
+        width: 90%;
+    }
+
+    h2 {
+        font-size: 18px;
+        width: 130px;
+        margin: none;
+    }
+
+    h3 {
+        margin: none;
+        font-size: 18px;
+        width: 200px
     }
 
     .container {
-        margin: 15px 5px 15px 5px;
+        margin: 100px 5px 15px 5px;
     }
 
     .list-one, .list-two, .list-three, .list-four {
