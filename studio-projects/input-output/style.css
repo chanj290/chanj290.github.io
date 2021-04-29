@@ -136,12 +136,13 @@ input::-webkit-inner-spin-button:focus {
     text-decoration: none;
     border: none;
     text-align: center;
+    justify-content: center;
     font-family: 'bookmaniasemibold_italic', 'Times New Roman', Times, serif;
     font-size: 24px;
     padding: 10px;
     background-color: #FFFFFF;
-    width: 160px;
-    height: 50px;
+    width: 180px;
+    height: 60px;
     cursor: pointer;
     border-radius: 30px;
     display: block;

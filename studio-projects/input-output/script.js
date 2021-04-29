@@ -144,6 +144,36 @@ $(document).ready(function() {
    
     var day = [
         "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
     ]
 
     function select_random(x){
@@ -174,18 +204,16 @@ $(document).ready(function() {
 
 });
 
-var doc = new jsPDF();
-var specialElementHandlers = {
-    '#editor': function (element, renderer) {
-        return true;
-    }
-};
 
-$('#download').click(function () {
-    doc.fromHTML($('#content').html(), 15, 15, {
-        'width': 170,
-            'elementHandlers': specialElementHandlers
-    });
-    doc.save('quarantine-activities.pdf');
-});
+let inputElement = document.querySelector("#input");
 
+let result = document.querySelector("#result");
+
+let numberOfdays = input.Element.value;
+
+for (let i = 0; i < 31; i++){
+
+}
+
+console.log(inputElement.value);
+result.innerText = "Your activities for " + inputElement.value + " days in quarantine.";

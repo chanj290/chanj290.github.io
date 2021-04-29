@@ -141,6 +141,10 @@ p {
     border-radius: 30px;
     display: block;
     margin: 50px auto 50px auto;
+    width: 180px;
+    height: 60px;
+    justify-content: center;
+    text-align: center;
   }
 
   .download-btn:hover {
