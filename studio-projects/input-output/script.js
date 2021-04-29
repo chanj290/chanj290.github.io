@@ -211,8 +211,8 @@ let result = document.querySelector("#result");
 
 let numberOfdays = input.Element.value;
 
-for (let i = 0; i < 31; i++){
-
+for (let i = 0; i < numberOfdays; i++){
+    generate();
 }
 
 console.log(inputElement.value);
