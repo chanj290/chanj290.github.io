@@ -81,3 +81,15 @@ a {
     width: 100%;
     height: auto;
 }
+
+.fun-fact {
+    font-weight: 100;
+    border-style: solid;
+    border-color:#BD0F45;
+    height: 70px;
+    border-width: 3px;
+    border-radius: 30px;
+    text-align: center;
+    justify-content: center;
+    cursor: pointer;
+}
