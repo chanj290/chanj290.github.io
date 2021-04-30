@@ -209,11 +209,11 @@ let inputElement = document.querySelector("#input");
 
 let result = document.querySelector("#result");
 
-let numberOfdays = input.Element.value;
+let numberOfdays = inputElement.value;
 
 for (let i = 0; i < numberOfdays; i++){
     generate();
 }
 
 console.log(inputElement.value);
-result.innerText = "Your activities for " + inputElement.value + " days in quarantine.";
+// result.innerText = "Your activities for " + inputElement.value + " days in quarantine.";

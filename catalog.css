@@ -1,0 +1,79 @@
+html, body, * {
+    margin: 0 0 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    }
+
+p {
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}
+
+.studio {
+    position: absolute;
+    top: 1%;
+    left: 1%;
+}
+
+.lab {
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    text-align: right;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+a:active {
+    text-decoration: none;
+    color: white;
+}
+
+span:hover {
+    font-style: italic;
+    cursor: pointer;
+    }
+
+.word1:hover {
+    color:rgb(2, 100, 129);
+}
+
+.word2:hover {
+    color:tan;
+}
+
+.word3:hover {
+    color:lightseagreen;
+}
+
+.word4:hover {
+    color:rgb(0, 139, 97);
+}
+
+.word5:hover {
+    color: yellowgreen;
+}
+
+.word6:hover {
+    color: olivedrab;
+}
+
+.word7:hover {
+    color: gold;
+}
+
+.word8:hover {
+    color: darkseagreen;
+}
