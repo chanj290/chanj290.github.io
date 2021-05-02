@@ -1,5 +1,7 @@
+// FUNCTION: Arrays for the activities category
+
 $(document).ready(function() {
-    // fill in the blank 1
+
     var movie = [
         "1917",
         "6 Underground",
@@ -60,7 +62,6 @@ $(document).ready(function() {
 
     ];
 
-    // fill in the blank 2
     var game = [
         "Among Us",
         "Club Penguin",
@@ -101,7 +102,6 @@ $(document).ready(function() {
         "Virtual Escape Room",
     ];
 
-    // fill in the blank 3
     var exercise = [
         "15 crunches",
         "20 crunches",
@@ -176,6 +176,9 @@ $(document).ready(function() {
         "31",
     ]
 
+
+// FUNCTION: generate random combo
+
     function select_random(x){
         y = x[Math.floor(Math.random()*x.length)];
         return y;
@@ -203,6 +206,8 @@ $(document).ready(function() {
     generate();
 
 });
+
+// DEFINING INPUT AND OUTPUT
 
 
 let inputElement = document.querySelector("#input");
