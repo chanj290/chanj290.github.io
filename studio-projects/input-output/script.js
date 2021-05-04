@@ -195,6 +195,15 @@ $(document).ready(function() {
         return tr;
     }
 
+    function shuffleArray(array) {
+        const newArray = array.map(i => i);
+        for (let i = newArray.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+        }
+        return newArray;
+    }
+
 // input value button
 
     // let result = document.querySelector("#result");
@@ -202,8 +211,11 @@ $(document).ready(function() {
     document.getElementById('go').addEventListener('click', () => {
         clearTable(document.getElementById('activities'));
         const numberOfDays = Number(document.getElementById('input').value);
+        const randomizedMovies = shuffleArray(movie);
+        const randomizedGames = shuffleArray(game);
+        const randomizedExercises = shuffleArray(exercise);
         const tableHeader = generateTableHeader('Day', 'Movie', 'Game', 'Exercise');
-        const tableRows = [...Array(numberOfDays).keys()].map((i) => generateTableRow(i + 1, select_random(movie), select_random(game), select_random(exercise)));
+        const tableRows = [...Array(numberOfDays).keys()].map((i) => generateTableRow(i + 1, randomizedMovies[i], randomizedGames[i], randomizedExercises[i]));
         document.getElementById('activities').append(tableHeader, ...tableRows);
         result.innerText = "Your activities for " + numberOfDays + " days in quarantine."
     });
@@ -215,6 +227,7 @@ $(document).ready(function() {
             const th = document.createElement('th');
             th.setAttribute('scope', 'col');
             th.textContent = title;
+            return th;
         });
         const tr = document.createElement('tr');
         tr.append(...header);
