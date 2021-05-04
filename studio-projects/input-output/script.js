@@ -197,7 +197,7 @@ $(document).ready(function() {
 
 // input value button
 
-    let result = document.querySelector("#result");
+    // let result = document.querySelector("#result");
 
     document.getElementById('go').addEventListener('click', () => {
         clearTable(document.getElementById('activities'));
@@ -208,7 +208,7 @@ $(document).ready(function() {
         result.innerText = "Your activities for " + numberOfDays + " days in quarantine."
     });
 
-// create table
+// creating the table header and a function for clearing the table:
 
     function generateTableHeader(...titles) {
         const header = entries.map((title) => {
