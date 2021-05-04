@@ -211,7 +211,7 @@ $(document).ready(function() {
 // creating the table header and a function for clearing the table:
 
     function generateTableHeader(...titles) {
-        const header = entries.map((title) => {
+        const header = titles.map((title) => {
             const th = document.createElement('th');
             th.setAttribute('scope', 'col');
             th.textContent = title;
