@@ -195,17 +195,35 @@ $(document).ready(function() {
         return tr;
     }
 
-    let result = document.querySelector("#result");
-    
-    document.getElementById('go').addEventListener('click', () => {
-        const numberOfDays = Number(document.getElementById('input').value);
-        const tableRows = [...Array(numberOfDays).keys()].map((i) => generateTableRow(i + 1, select_random(movie), select_random(game), select_random(exercise)));
-        document.getElementById('activities').append(...tableRows);
-        result.innerText = "Your activities for " + numberOfDays.value + " days in quarantine."
+// input value button
 
+    let result = document.querySelector("#result");
+
+    document.getElementById('go').addEventListener('click', () => {
+        clearTable(document.getElementById('activities'));
+        const numberOfDays = Number(document.getElementById('input').value);
+        const tableHeader = generateTableHeader('Day', 'Movie', 'Game', 'Exercise');
+        const tableRows = [...Array(numberOfDays).keys()].map((i) => generateTableRow(i + 1, select_random(movie), select_random(game), select_random(exercise)));
+        document.getElementById('activities').append(tableHeader, ...tableRows);
+        result.innerText = "Your activities for " + numberOfDays + " days in quarantine."
     });
 
+// create table
+
+    function generateTableHeader(...titles) {
+        const header = entries.map((title) => {
+            const th = document.createElement('th');
+            th.setAttribute('scope', 'col');
+            th.textContent = title;
+        });
+        const tr = document.createElement('tr');
+        tr.append(...header);
+        return tr;
+    }
+    function clearTable(table) {
+        while (table.childNodes.length > 0) {
+            table.removeChild(table.firstChild);
+        }
+    }
 
 });
-
-// ;
