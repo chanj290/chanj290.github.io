@@ -194,13 +194,18 @@ $(document).ready(function() {
         tr.append(...row);
         return tr;
     }
+
+    let result = document.querySelector("#result");
+    
     document.getElementById('go').addEventListener('click', () => {
         const numberOfDays = Number(document.getElementById('input').value);
         const tableRows = [...Array(numberOfDays).keys()].map((i) => generateTableRow(i + 1, select_random(movie), select_random(game), select_random(exercise)));
         document.getElementById('activities').append(...tableRows);
+        result.innerText = "Your activities for " + numberOfDays.value + " days in quarantine."
+
     });
 
 
 });
 
-// result.innerText = "Your activities for " + inputElement.value + " days in quarantine.";
+// ;

@@ -46,8 +46,26 @@ p {
     width: 40%;
     line-height: 120%;
     margin: 400px auto 50px auto;
-    
 }
+
+.back {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    font-family: 'bookmaniaregular';
+}
+
+a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #4d636e;
+}
+
 
 @media screen and (max-width: 800px) {
     p{
