@@ -19,11 +19,10 @@ p {
     left: 1%;
 }
 
-.lab {
+.info {
     position: absolute;
-    top: 1%;
-    right: 1%;
-    text-align: right;
+    bottom: 1%;
+    left: 1%;
 }
 
 a {
@@ -39,6 +38,19 @@ a:visited {
 a:active {
     text-decoration: none;
     color: white;
+}
+
+img{
+    display: none
+}
+
+p:hover + img{
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50%;
+    height: auto;
 }
 
 span:hover {
@@ -76,4 +88,10 @@ span:hover {
 
 .word8:hover {
     color: darkseagreen;
+}
+
+@media screen and (max-width: 600px) {
+    p {
+        font-size: 14px;
+    }
 }
