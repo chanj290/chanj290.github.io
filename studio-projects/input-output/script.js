@@ -184,41 +184,23 @@ $(document).ready(function() {
         return y;
     }
 
-    function generate(){
-
-        // selecting a random item from each list
-        var selected_one = select_random(movie);
-        var selected_two = select_random(game);
-        var selected_three = select_random(exercise);
-        var selected_four = select_random(day);
-
-        // make selected random word visible
-        $('.list-one').html(selected_one);
-        $('.list-two').html(selected_two);
-        $('.list-three').html(selected_three);
-        $('.list-four').html(selected_four);
+    function generateTableRow(...entries) {
+        const row = entries.map((entry) => {
+            const td = document.createElement('td');
+            td.textContent = entry;
+            return td;
+        });
+        const tr = document.createElement('tr');
+        tr.append(...row);
+        return tr;
     }
-
-    $('#go').click(function(){
-        generate();
+    document.getElementById('go').addEventListener('click', () => {
+        const numberOfDays = Number(document.getElementById('input').value);
+        const tableRows = [...Array(numberOfDays).keys()].map((i) => generateTableRow(i + 1, select_random(movie), select_random(game), select_random(exercise)));
+        document.getElementById('activities').append(...tableRows);
     });
 
-    generate();
 
 });
 
-// DEFINING INPUT AND OUTPUT
-
-
-let inputElement = document.querySelector("#input");
-
-let result = document.querySelector("#result");
-
-let numberOfdays = inputElement.value;
-
-for (let i = 0; i < numberOfdays; i++){
-    generate();
-}
-
-console.log(inputElement.value);
 // result.innerText = "Your activities for " + inputElement.value + " days in quarantine.";

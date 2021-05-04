@@ -26,30 +26,17 @@
     
             <h5>Your activities for X days in quarantine!</h5>
             </div>
-    
-                <div class="container">
-    
-                    <div class="days-column">
-                        <h4>Day</h4>
-                        <span class="list-four"></span>
-                    </div>
-    
-                    <div class="movies-column">
-                        <h4>Movie</h4>
-                        <span class="list-one"></span>
-                    </div>
-    
-                    <div class="games-column">
-                        <h4>Game</h4>
-                        <span class="list-two"></span>
-                    </div>
-    
-                    <div class="exercises-column">
-                        <h4>Exercise</h4>
-                        <span class="list-three"></span>
-                    </div>
-    
-                </div>
+            
+            <table>
+                <tbody id="activities">
+                    <tr>
+                        <th scope="col">Day</th>
+                        <th scope="col">Movie</th>
+                        <th scope="col">Game</th>
+                        <th scope="col">Exercise</th>
+                    </tr>
+                </tbody>
+            </table>
                 
                 <button class="download-btn" onclick="window.print();return false;">Download</button>
 
