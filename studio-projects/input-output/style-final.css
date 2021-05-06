@@ -266,6 +266,14 @@ h5 {
 	text-align: center;
 }
 
+.download-btn:hover {
+	background-color: #c2c2c2;
+}
+
+.print-container {
+	display: none;
+}
+
 @media screen and (max-width: 800px) {
 	h1 {
 		font-size: 36px;
