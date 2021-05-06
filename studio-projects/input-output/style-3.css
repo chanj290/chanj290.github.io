@@ -31,23 +31,10 @@ html {
     font-family: 'bookmania', 'Times New Roman', Times, serif;
 }
 
-body {
-	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
-    color: #FFFFFF;
-}
 
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+body {
+    background-color: #B6CDD8;
+    color: #FFFFFF;
 }
 
 table {
@@ -136,7 +123,7 @@ p {
     font-family: 'bookmaniaregular', 'Times New Roman', Times, serif;
     font-size: 24px;
     justify-content: center;
-    background-color: #9ab1bd;
+    background-color: #adadad;
     color: #FFFFFF;
     display: inline-block;
 }
@@ -188,7 +175,7 @@ a {
 
 a:hover {
     text-decoration: none;
-    color: #4d636e;
+    color: #7e7e7e;
 }
 
 h5 {
@@ -232,7 +219,8 @@ h5 {
 }
 
 .download-btn {
-    background-color: #9ab1bd;
+    background-color: #adadad;
+    ;
     border: none;
     color: white;
     padding: 12px 30px;
@@ -249,7 +237,7 @@ h5 {
   }
 
   .download-btn:hover {
-    background-color: #4d636e;
+    background-color: #7e7e7e;
   }
 
 @media screen and (max-width: 800px) {

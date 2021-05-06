@@ -33,10 +33,18 @@
     font-style: normal;
 
 }
+
+html {
+    background: -moz-linear-gradient(45deg, #8050BF 0%, #85CCFF 100%); /* ff3.6+ */
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #8050BF), color-stop(100%, #85CCFF)); /* safari4+,chrome */
+    background: -webkit-linear-gradient(45deg, #8050BF 0%, #85CCFF 100%); /* safari5.1+,chrome10+ */
+    background: -o-linear-gradient(45deg, #8050BF 0%, #85CCFF 100%); /* opera 11.10+ */
+    background: -ms-linear-gradient(45deg, #8050BF 0%, #85CCFF 100%); /* ie10+ */
+    background: linear-gradient(45deg, #8050BF 0%, #85CCFF 100%); /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#85CCFF', endColorstr='#8050BF',GradientType=1 ); /* ie6-9 */
+}
+
 body {
-	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
     color: #FFFFFF;
 }
 
@@ -51,7 +59,6 @@ body {
 		background-position: 0% 50%;
 	}
 }
-
 
 p {
     font-family: 'bookmaniaregular';

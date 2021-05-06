@@ -29,10 +29,11 @@
 
 html {
     font-family: 'bookmania', 'Times New Roman', Times, serif;
+    color: #FFFFFF;
 }
 
 body {
-	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background: linear-gradient(-45deg, #e65a23, #e7d63c, #23a6d5, #0a2d61);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
     color: #FFFFFF;
@@ -56,14 +57,14 @@ table {
     table-layout: fixed;
     margin: 4em 0;
     font-size: 24px;
-    color: #2b2b2b;
+    color: #FFFFFF;
 }
 
 th {
     font-size: 50px;
     line-height: 100%;
     font-weight: 600;
-    color: #fff;
+    color: #FFFFFF;
     padding-bottom: 1em;
 }
 
@@ -75,7 +76,7 @@ h1 {
     text-align: center;
     width: 800px;
     display: flex;
-    margin: 200px auto 50px auto;
+    margin: 150px auto 50px auto;
 }
 
 h2 {
@@ -85,8 +86,9 @@ h2 {
     cursor: default;
     width: 250px;
     position: absolute;
-    top: 11px;
-    left: 30px;
+    top: 0px;
+    left: 11px;
+    margin-top: 11px;
 }
 
 a {
@@ -96,7 +98,7 @@ a {
 
 a:hover {
     text-decoration: none;
-    color: #9ab1bd;
+    color: #d8d8d8;
 }
 
 .input {
@@ -120,25 +122,37 @@ p {
     cursor: default;
 }
 
+tbody {
+    color:#FFFFFF;
+    font-family: 'bookmaniaregular';
+}
+
 .instructions {
     font-family: 'bookmaniaitalic';
     font-size: 18px;
+    color: #FFFFFF;
     display: block;
     margin: 50px auto 0px auto;
 }
 
 .input-container {
     text-decoration: none;
-    border: none;
-    height: 50px;
+    border: solid;
+    border-width: 1px;
+    border-color: #d8d8d8; 
+    height: 40px;
     width: 100px;
     text-align: center;
     font-family: 'bookmaniaregular', 'Times New Roman', Times, serif;
     font-size: 24px;
     justify-content: center;
-    background-color: #9ab1bd;
+    background-color: #ffffff00;
     color: #FFFFFF;
     display: inline-block;
+}
+
+.input-container:focus {
+    outline: none;
 }
 
 input::-webkit-outer-spin-button,
@@ -164,7 +178,7 @@ input::-webkit-inner-spin-button:focus {
     cursor: pointer;
     border-radius: 30px;
     display: block;
-    margin: 20px auto 50px auto;
+    margin: 60px auto 40px auto;
 }
 
 button:focus {
@@ -188,7 +202,7 @@ a {
 
 a:hover {
     text-decoration: none;
-    color: #4d636e;
+    color: #c2c2c2;
 }
 
 h5 {
@@ -200,7 +214,7 @@ h5 {
     text-align: center;
     display: flex;
     justify-self: right;
-    margin: 100px auto 0px auto;
+    margin: 70px auto 0px auto;
 }
 
 .input {
@@ -232,7 +246,7 @@ h5 {
 }
 
 .download-btn {
-    background-color: #9ab1bd;
+    background-color: #d8d8d8;
     border: none;
     color: white;
     padding: 12px 30px;
@@ -240,7 +254,7 @@ h5 {
     font-size: 24px;
     font-family: 'bookmaniasemibold_italic', 'Times New Roman', Times, serif;
     border-radius: 30px;
-    display: block;
+    display: none;
     margin: 50px auto 50px auto;
     width: 180px;
     height: 60px;
@@ -249,8 +263,12 @@ h5 {
   }
 
   .download-btn:hover {
-    background-color: #4d636e;
+    background-color: #c2c2c2;
   }
+
+table {
+    display: none;
+}
 
 @media screen and (max-width: 800px) {
     h1 {
