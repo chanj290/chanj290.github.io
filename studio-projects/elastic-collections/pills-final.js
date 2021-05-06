@@ -20,6 +20,8 @@ let allItems = [];
 
 //array of draggable pills. each item will store the element and shape of each pill
 const PILLS = [];
+// array for each pill element
+let pillElementsArray = [];
 
 // inside the () after base put the name of YOUR spreadsheet
 base('pills').select({}).eachPage(function page(tableItems, fetchNextPage) {
@@ -37,7 +39,7 @@ base('pills').select({}).eachPage(function page(tableItems, fetchNextPage) {
 
   // all items received, no errors!!
   // console log the allItems array, you should see all of your data in there now.
-  console.log(allItems);
+  // console.log(allItems);
 
   // now, call a new function to do stuff with your data and pass the allItems array into it
   setTable(allItems);
@@ -45,13 +47,14 @@ base('pills').select({}).eachPage(function page(tableItems, fetchNextPage) {
   makePillsDraggable(PILLS);
 });
 
+// make a container div and append it to the body
+// this way we can append all of our items to a div which we can style later
+let container = document.createElement("div");
+container.classList.add("container");
+document.body.appendChild(container);
+
 
 function setTable(allItems) {
-  // make a container div and append it to the body
-  // this way we can append all of our items to a div which we can style later
-  let container = document.createElement("div");
-  container.classList.add("container");
-  document.body.appendChild(container);
 
   // run a forEach loop on your array, with each item
   // then make a new HTML element and position it somewhere on the page 
@@ -93,8 +96,23 @@ function setTable(allItems) {
       }
     });
 
-    container.appendChild(itemImage);
+    // container.appendChild(itemImage);
+    pillElementsArray.push(itemImage);
+
   })
+  setTenRandomPills();
+}
+
+// FUNCTION: display only ten random pills on the screen at a time
+function setTenRandomPills() {
+  console.log("set ten random pills");
+
+  for (var i=0; i<10; i++) {
+    let randomNumber = Math.floor(Math.random() * pillElementsArray.length)
+    let randomPill = pillElementsArray[randomNumber];
+    console.log(randomPill);
+    container.appendChild(randomPill);
+  }
 }
 
 // FUNCTION: randomize position
@@ -102,7 +120,7 @@ function getRandomPlace() {
   let container = document.querySelector(".container");
 	var x = container.clientWidth;
 	var y = container.clientHeight;
-  console.log(x, y);
+  // console.log(x, y);
 	var randomHorizontal = Math.floor(Math.random()*x);
 	var randomVertical = Math.floor(Math.random()*y);
 	return [randomHorizontal, randomVertical];
