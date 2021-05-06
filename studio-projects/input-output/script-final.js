@@ -1,5 +1,4 @@
 // FUNCTION: Arrays for the activities category
-
 $(document).ready(function() {
 
     var movie = [
@@ -242,13 +241,11 @@ $(document).ready(function() {
     }
 
 });
-
 // print button printing only a specific section not the whole window
-
 var prtContent = document.getElementById("download=btn");
-var WinPrint = window.open("#content");
-WinPrint.document.write(prtContent.innerHTML);
-WinPrint.document.close();
-WinPrint.focus();
-WinPrint.print();
-WinPrint.close();
+// var WinPrint = window.open("#content");
+// WinPrint.document.write(prtContent.innerHTML);
+// WinPrint.document.close();
+// WinPrint.focus();
+// WinPrint.print();
+// WinPrint.close();
