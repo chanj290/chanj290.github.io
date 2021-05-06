@@ -94,6 +94,7 @@ h2 {
 	top: 0px;
 	left: 11px;
 	margin-top: 11px;
+	font-style: italic;
 }
 
 a {
@@ -138,6 +139,7 @@ tbody {
 	color: #FFFFFF;
 	display: block;
 	margin: 50px auto 0px auto;
+	font-style: italic;
 }
 
 .input-container {
@@ -184,6 +186,7 @@ input::-webkit-inner-spin-button:focus {
 	border-radius: 30px;
 	display: block;
 	margin: 60px auto 40px auto;
+	font-style: italic;
 }
 
 button:focus {
@@ -220,6 +223,7 @@ h5 {
 	display: flex;
 	justify-self: right;
 	margin: 70px auto 0px auto;
+	font-style: italic;
 }
 
 .input {
@@ -264,6 +268,7 @@ h5 {
 	height: 60px;
 	justify-content: center;
 	text-align: center;
+	font-style: italic;
 }
 
 .download-btn:hover {

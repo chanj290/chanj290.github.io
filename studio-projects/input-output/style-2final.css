@@ -54,7 +54,7 @@ body {
 
 
 p {
-    font-family: 'bookmaniaregular';
+    font-family: 'bookmaniaregular', 'Times New Roman', Times, serif;
     font-size: 24px;
     cursor: default;
     width: 40%;
@@ -67,7 +67,7 @@ p {
     top: 10px;
     left: 10px;
     font-size: 24px;
-    font-family: 'bookmaniaregular';
+    font-family: 'bookmaniaregular', 'Times New Roman', Times, serif;
 }
 
 a {
