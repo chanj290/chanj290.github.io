@@ -331,6 +331,9 @@ h5 {
 
 	.print-container * {
 		color: #000;
+	}
+
+	.print-container ~ * {
 		display: none;
 	}
 
