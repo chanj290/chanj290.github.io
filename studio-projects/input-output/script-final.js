@@ -220,7 +220,6 @@ $(document).ready(function() {
         document.getElementById('activities').append(tableHeader, ...tableRows);
         result.innerText = "Your activities for " + numberOfDays + " days in quarantine:"
         showDownloadbtn.style.display = "block";
-        container.appendChild(showDownloadbtn)
     });
 
 // creating the table header and a function for clearing the table:
