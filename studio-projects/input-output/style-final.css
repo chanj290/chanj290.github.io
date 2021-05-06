@@ -326,6 +326,7 @@ h5 {
 
 	.print-container * {
 		color: #000;
+		display: none;
 	}
 
 	.print-container table {

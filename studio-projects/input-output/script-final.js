@@ -211,7 +211,7 @@ $(document).ready(function() {
 		result.innerText = "Your activities for " + numberOfDays + " days in quarantine:"
 		showDownloadbtn.style.display = "block";
 		showDownloadbtn.onclick = () => {
-			printContent(document.getElementById('content'), document.querySelector('table'));
+			printContent(document.getElementById('content'));
 		};
 	});
 	// creating the table header and a function for clearing the table:
@@ -240,7 +240,7 @@ $(document).ready(function() {
 		const paper = document.createElement('div');
 		paper.className = 'print-container';
 		paper.append(...clonedContents);
-		document.body.appendChild(paper);
+		document.body.insertBefore(paper, document.body.firstChild);
 		window.print();
 		paper.remove();
 		contents.forEach((i) => i.style.display = '');
