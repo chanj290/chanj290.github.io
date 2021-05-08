@@ -1,6 +1,6 @@
 // FUNCTION: Arrays for the activities category
 $(document).ready(function() {
-
+ 	// list of movies
     var movie = [
 		"1917",
 		"6 Underground",
@@ -59,6 +59,7 @@ $(document).ready(function() {
 		"Wonder",
 		"Zootopia",
 	];
+	// list of online games
 	var game = [
 		"Among Us",
 		"Club Penguin",
@@ -98,6 +99,7 @@ $(document).ready(function() {
 		"Keep Talking and Nobody Explodes",
 		"Virtual Escape Room",
 	];
+	// list of exercises
 	var exercise = [
 		"15 crunches",
 		"20 crunches",
@@ -137,6 +139,7 @@ $(document).ready(function() {
 		"40 burpees",
 		"50 burpees",
 	];
+	// number of days
 	var day = [
 		"1",
 		"2",
@@ -171,22 +174,27 @@ $(document).ready(function() {
 		"31",
 	]
 	// FUNCTION: generate random combo
+
+	// this function randomizes
 	function select_random(x) {
 		y = x[Math.floor(Math.random() * x.length)];
 		return y;
 	}
-
+   // this function generates the table rows
 	function generateTableRow(...entries) {
 		const row = entries.map((entry) => {
+			 // for each row, create the td element in the document and put the text inside it
 			const td = document.createElement('td');
 			td.textContent = entry;
 			return td;
 		});
+		// create the tr element and display it in the html
 		const tr = document.createElement('tr');
 		tr.append(...row);
 		return tr;
 	}
 
+	// this function shuffles all the arrays and that it randomizes without having any repeats. if there is a repeated array, it randomizes for a new one.
 	function shuffleArray(array) {
 		const newArray = array.map(i => i);
 		for (let i = newArray.length - 1; i > 0; i--) {
@@ -199,48 +207,70 @@ $(document).ready(function() {
 	// let result = document.querySelector("#result");
 	let showDownloadbtn = document.getElementById("download-btn");
 	document.getElementById('go').addEventListener('click', () => {
+		// check for validity which doesn't allow the user to go past the value 31
 		if (!document.getElementById('input').checkValidity()) return;
+		// this clears any previous table results displayed
 		clearTable(document.getElementById('activities'));
+		// let the input value equal the number of days
 		const numberOfDays = Number(document.getElementById('input').value);
+		// randomize without repeats the movie array
 		const randomizedMovies = shuffleArray(movie);
+		// randomize without repeats the game array
 		const randomizedGames = shuffleArray(game);
+		// randomize without repeats the exercise array
 		const randomizedExercises = shuffleArray(exercise);
+		// create a table header for the different columns
 		const tableHeader = generateTableHeader('Day', 'Movie', 'Game', 'Exercise');
+		// create table rows for each array based on the number of days
 		const tableRows = [...Array(numberOfDays).keys()].map((i) => generateTableRow(i + 1, randomizedMovies[i], randomizedGames[i], randomizedExercises[i]));
+		// display these activties on the table header and table rows to the html
 		document.getElementById('activities').append(tableHeader, ...tableRows);
+		// show your activities for x amount of days in quarantine
 		result.innerText = "Your activities for " + numberOfDays + " days in quarantine:"
+		// display the download print button
 		showDownloadbtn.style.display = "block";
+		// when clicking the download button, it prints everything within the div with the content id
 		showDownloadbtn.onclick = () => {
 			printContent(document.getElementById('content'));
 		};
 	});
 	// creating the table header and a function for clearing the table:
+	// make the table header
 	function generateTableHeader(...titles) {
 		const header = titles.map((title) => {
+			// create the th element onto the doc
 			const th = document.createElement('th');
+			// make them into columns
 			th.setAttribute('scope', 'col');
+			// within the header text are the titles
 			th.textContent = title;
 			return th;
 		});
+		// create the table rows element and append to html
 		const tr = document.createElement('tr');
 		tr.append(...header);
 		return tr;
 	}
-
+	// this clears the table for any previous results and removes any child table
 	function clearTable(table) {
 		while (table.childNodes.length > 0) {
 			table.removeChild(table.firstChild);
 		}
 	}
-
+	// function for printing
 	function printContent(...contents) {
 		const clonedContents = contents.map((i) => i.cloneNode(true));
+		// contents is everything you want to be printed
 		contents.forEach((i) => i.style.display = 'none');
 		console.log(clonedContents);
+		// paper equals the div created in the document
 		const paper = document.createElement('div');
+    	// takes the class name print container
 		paper.className = 'print-container';
+   		// append all the cloned contents
 		paper.append(...clonedContents);
 		document.body.insertBefore(paper, document.body.firstChild);
+		// print the window but remove that isn't included in the div you want
 		window.print();
 		paper.remove();
 		contents.forEach((i) => i.style.display = '');
